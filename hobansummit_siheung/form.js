@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
 
-      const scriptURL = "https://script.google.com/macros/s/AKfycbxmk6BlESknhkNkhH-ANhglYJQLGDx6FZ7ZTmJ4XfaPC4tNlHPcV0CxDaS13oWjlMARCQ/exec";
+      const scriptURL = "https://script.google.com/macros/s/AKfycbzMzW0Lc0AqI16-nTIgJWy32tSuAN80rqUy9TJ3jTl6Xb4Llnf86-4QEhKQhzRBlUJLNA/exec";
 
       const formData = new FormData(form);
 
