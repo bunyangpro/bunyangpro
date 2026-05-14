@@ -15,3 +15,37 @@ const visitDates = document.querySelectorAll('input[type="date"]');
 visitDates.forEach((dateInput) => {
   dateInput.min = minDate;
 });
+
+
+
+// 전화번호 자동 하이픈
+const phoneInput = document.querySelector("#phoneTop");
+
+phoneInput.addEventListener("input", function (e) {
+
+  let value = e.target.value;
+
+  // 숫자만 남기기
+  value = value.replace(/[^0-9]/g, "");
+
+  // 자동 하이픈
+  if (value.length < 4) {
+
+    value = value;
+
+  } else if (value.length < 8) {
+
+    value = value.replace(/(\d{3})(\d+)/, "$1-$2");
+
+  } else {
+
+    value = value.replace(
+      /(\d{3})(\d{4})(\d+)/,
+      "$1-$2-$3"
+    );
+
+  }
+
+  e.target.value = value;
+
+});
