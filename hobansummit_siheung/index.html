@@ -6,127 +6,130 @@
     <title>시흥거모 호반썸밋</title>
     <!-- 파비콘 설정 -->
     <!-- og태그 -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./import.css">
     <!-- fontawesome 링크 -->
      <script src="https://kit.fontawesome.com/4d2fb223aa.js" crossorigin="anonymous"></script>
     <script src="./content.js"></script>
-    <script src="./form.js" defer></script>
+    <script src="./date.js" defer></script>
+    <script src="form.js" defer></script>
 </head>
 <body>
-    <!-- 헤더영역 -->
-    <header class="header-box">
-        <!-- 메인헤더 -->
-        <div class="main-header">
-            <!-- 로고 -->
-            <div class="header-logo">
-                <a href="#section1">
-                    <img src="./images/header-logo.png" alt="호반써밋 시흥거모 로고">
-                </a>
-            </div>
-            <!-- 전화번호 -->
-            <div class="header-phone shake">
-                <a href="tel:1800-1324">
-                    <span>1800-1324</span>
-                </a>
-            </div>
-        </div>
-    </header>
-
-    <!-- 섹션1 - 메인영역 -->
-     <section id="section1" class="main-section">
-        <div class="main-bg"></div>
-        <div class="main-title">
-
-        </div>
-            <div class="main-txt">
-            <!-- 메인 타이틀 영역 -->
-                <p class="sub-title">시흥의 새로운 중심,</p>
-                <h2>거모 호반써밋</h2>
-                <p>여의도까지 더 가까워지는 프리미엄 라이프!</p>
-            </div>
-            <!-- 혜택 문구 영역 -->
-             <div class="main-benefits">
-                <div class="benefit-txt animate">
-                    정부 지원 대출 + <span>계약금 500만</span>원으로 내 집 마련!
+    <div class="wrap">
+        <!-- 헤더영역 -->
+        <header class="header-box">
+            <!-- 메인헤더 -->
+            <div class="main-header">
+                <!-- 로고 -->
+                <div class="header-logo">
+                    <a href="#section1">
+                        <img src="./images/header-logo.png" alt="호반써밋 시흥거모 로고">
+                    </a>
                 </div>
-                <div class="benefit-txt animate">호반만의 소음 저감 특화 설계</div>
-                <div class="benefit-txt animate">검증된 브랜드 프리미엄</div>
-             </div>
-            <!-- 스크롤 애니메이션 -->
-             <div class="scroll-down">
-                <div class="scroll-icon">
-                    <span class="arrow"></span>
-                    <span class="arrow"></span>
-                    <span class="arrow"></span>
+                <!-- 전화번호 -->
+                <div class="header-phone shake">
+                    <a href="tel:1800-1324">
+                        <span>1800-1324</span>
+                    </a>
                 </div>
-             </div>
-            <!-- 하단 아파트 이미지 -->
-            <div class="bottom-img">
-                <img src="./images/main-2.png" alt="호반써밋 시흥거모 B1">
             </div>
-            <!-- 그라디언트 -->
-             <div class="main-gradient"></div>
-     </section>
+        </header>
 
-     <!-- 방문예약 영역 -->
-     <section id="section2" class="visit-form">
-        <div class="form-title">
-            <h2>
-                <p>호반써밋 시흥거모 B1</p>
-                방문예약
-            </h2>
-            <p>모델하우스 관람은 사전예약제로 운영됩니다.</p>
-        </div>
+        <!-- 섹션1 - 메인영역 -->
+        <section id="section1" class="main-section">
+           <div class="main-bg"></div>
+           <div class="main-title">
 
-        <!-- 방문예약 제출폼 -->
-        <form id="reserveForm">
-            <input type="hidden" name="project" value="시흥 호반써밋">
-            <div class="form-group">
-                <label for="nameTop">예약자 성함</label>
-                <input type="text" name="name" id="nameTop" placeholder="성함을 입력해주세요." required>
-            </div>
-            <div class="form-group">
-                <label for="phoneTop">연락처</label>
-                <input type="tel" id="phoneTop" name="phone" placeholder="전화번호를 입력해주세요." pattern="010-[0-9]{4}-[0-9]{4}" required>
-            </div>
-            <div class="form-group">
-                <label for="visitTop">방문 희망일</label>
-                <input type="date" name="visitDate" id="visitTop" required>
-            </div>
-            <div class="form-group">
-                <label for="timeTop">방문 희망 시간</label>
-                <select name="visitTime" id="timeTop">
-                    <option value="10:00">10:00</option>
-                    <option value="11:00">11:00</option>
-                    <option value="12:00">12:00</option>
-                    <option value="13:00">13:00</option>
-                    <option value="14:00">14:00</option>
-                    <option value="15:00">15:00</option>
-                    <option value="16:00">16:00</option>
-                    <option value="17:00">17:00</option>
-                </select>
-            </div>
-
-            <!-- 이용약관 영역 -->
-            <div class="privary-group">
-                <div class="pravicy-content">
-                    [개인정보 수집 및 이용동의] <br>
-                    1. 수집항목: 성함, 연락처, 방문일시 <br>
-                    2. 수집목적: 모델하우스 방문예약 확인 및 안내 <br>
-                    3. 보유기간: 분양 종료 시까지 (종료 후 파기)
+           </div>
+               <div class="main-txt">
+               <!-- 메인 타이틀 영역 -->
+                   <p class="sub-title">시흥의 새로운 중심,</p>
+                   <h2>거모 호반써밋</h2>
+                   <p>여의도까지 더 가까워지는 프리미엄 라이프!</p>
+               </div>
+               <!-- 혜택 문구 영역 -->
+                <div class="main-benefits">
+                   <div class="benefit-txt animate">
+                       정부 지원 대출 + <span>계약금 500만</span>원으로 내 집 마련!
+                   </div>
+                   <div class="benefit-txt animate">호반만의 소음 저감 특화 설계</div>
+                   <div class="benefit-txt animate">검증된 브랜드 프리미엄</div>
                 </div>
-                <label class="privacy-agree">
-                    <input type="checkbox" name="agree" id="agree" required>
-                    개인정보 수집 및 이용에 동의합니다.
-                </label>
-            </div>
+               <!-- 스크롤 애니메이션 -->
+                <div class="scroll-down">
+                   <div class="scroll-icon">
+                       <span class="arrow"></span>
+                       <span class="arrow"></span>
+                       <span class="arrow"></span>
+                   </div>
+                </div>
+               <!-- 하단 아파트 이미지 -->
+               <div class="bottom-img">
+                   <img src="./images/main-2.png" alt="호반써밋 시흥거모 B1">
+               </div>
+               <!-- 그라디언트 -->
+                <div class="main-gradient"></div>
+        </section>
 
-            <!-- 제출하기 버튼 -->
-            <button type="submit" class="submitBtn">제출하기</button>
-        </form>
-     </section>
+        <!-- 방문예약 영역 -->
+        <section id="section2" class="visit-form">
+           <div class="form-title">
+               <h2>
+                   <p>호반써밋 시흥거모 B1</p>
+                   방문예약
+               </h2>
+               <p>모델하우스 관람은 사전예약제로 운영됩니다.</p>
+           </div>
 
-     <section id="section3" class="details">
+           <!-- 방문예약 제출폼 -->
+           <form id="reserveForm">
+               <input type="hidden" name="project" value="시흥 호반써밋">
+               <div class="form-group">
+                   <label for="nameTop">예약자 성함</label>
+                   <input type="text" name="name" id="nameTop" placeholder="성함을 입력해주세요." required>
+               </div>
+               <div class="form-group">
+                   <label for="phoneTop">연락처</label>
+                   <input type="tel" id="phoneTop" name="phone" placeholder="전화번호를 입력해주세요." pattern="010-[0-9]{4}-[0-9]{4}" required>
+               </div>
+               <div class="form-group">
+                   <label for="visitTop">방문 희망일</label>
+                   <input type="date" name="visitDate" id="visitTop" required>
+               </div>
+               <div class="form-group">
+                   <label for="timeTop">방문 희망 시간</label>
+                   <select name="visitTime" id="timeTop">
+                       <option value="10:00">10:00</option>
+                       <option value="11:00">11:00</option>
+                       <option value="12:00">12:00</option>
+                       <option value="13:00">13:00</option>
+                       <option value="14:00">14:00</option>
+                       <option value="15:00">15:00</option>
+                       <option value="16:00">16:00</option>
+                       <option value="17:00">17:00</option>
+                   </select>
+               </div>
+
+               <!-- 이용약관 영역 -->
+               <div class="privary-group">
+                   <div class="pravicy-content">
+                       [개인정보 수집 및 이용동의] <br>
+                       1. 수집항목: 성함, 연락처, 방문일시 <br>
+                       2. 수집목적: 모델하우스 방문예약 확인 및 안내 <br>
+                       3. 보유기간: 분양 종료 시까지 (종료 후 파기)
+                   </div>
+                   <label class="privacy-agree">
+                       <input type="checkbox" name="agree" id="agree" required>
+                       개인정보 수집 및 이용에 동의합니다.
+                   </label>
+               </div>
+
+               <!-- 제출하기 버튼 -->
+               <button type="submit" class="submitBtn">제출하기</button>
+           </form>
+        </section>
+
+        <section id="section3" class="details">
         <h2 class="hidden">호반썸밋 시흥거모</h2>
         <div class="details-img">
             <img src="./images/section-2.png" alt="호반썸밋 시흥거모 디테일 내용">
@@ -137,10 +140,10 @@
         <div class="details-img">
             <img src="./images/section-4.png" alt="호반썸밋 시흥거모 디테일 내용">
         </div>
-     </section>
+        </section>
 
-     <!-- 사업개요 영역 -->
-     <section id="section4" class="summary">
+        <!-- 사업개요 영역 -->
+        <section id="section4" class="summary">
         <h2>
             <p>호반써밋 시흥거모 B1</p>
             사업개요
@@ -183,10 +186,10 @@
                 </div>
             </li>
         </ul>
-     </section>
+        </section>
 
-     <!-- 방문예약 영역 -->
-     <section id="section2" class="visit-form">
+        <!-- 방문예약 영역 -->
+        <section id="section5" class="visit-form">
         <div class="form-title">
             <h2>
                 <p>호반써밋 시흥거모 B1</p>
@@ -227,10 +230,17 @@
             <!-- 이용약관 영역 -->
             <div class="privary-group">
                 <div class="pravicy-content">
-                    [개인정보 수집 및 이용동의] <br>
-                    1. 수집항목: 성함, 연락처, 방문일시 <br>
-                    2. 수집목적: 모델하우스 방문예약 확인 및 안내 <br>
-                    3. 보유기간: 분양 종료 시까지 (종료 후 파기)
+                    1. 본 서비스는 이용자가 입력한 정보를 바탕으로 상담 및 방문 예약 연결 서비스를 제공합니다.<br>
+
+                    2. 이용자가 작성한 개인정보는 상담 요청 및 분양 안내 목적으로 활용되며, 관련 서비스 제공 업체에 전달될 수 있습니다. <br>
+
+                    3. 분양프로는 광고 운영 및 상담 신청 접수 역할을 수행하며, 이후 실제 계약 및 상담 진행에 대해서는 직접 관여하지 않습니다. <br>
+
+                    4. 이용자는 본인의 정보를 정확하게 입력해야 하며, 허위 또는 타인의 정보를 입력할 경우 이에 대한 책임은 이용자 본인에게 있습니다. <br>
+
+                    5. 본 약관은 관련 법령 및 정책 변경에 따라 수정될 수 있습니다. <br>
+
+                    시행일 : 2025년 11월 11일
                 </div>
                 <label class="privacy-agree">
                     <input type="checkbox" name="agree" id="agree" required>
@@ -241,15 +251,25 @@
             <!-- 제출하기 버튼 -->
             <button type="submit" class="submitBtn">제출하기</button>
         </form>
-     </section>
+        </section>
 
-     <!-- 푸터 -->
-      <footer>
-        <div class="fotter-box">
-            <div class="logo-box"><img src="./images/footer-logo.png" alt="호반썸밋 시흥거모 로고"></div>
-            <p>문의하기 <a href="tel:1800-1324">1800-1324</a></p>
-            <p>© 2026 시흥거모 호반써밋. All rights reserved.</p>
-        </div>
-      </footer>
+        <!-- 푸터 -->
+        <footer>
+          <div class="fotter-box">
+              <div class="logo-box"><img src="./images/footer-logo.png" alt="호반썸밋 시흥거모 로고"></div>
+              <p>문의하기 <a href="tel:1800-1324">1800-1324</a></p>
+              <p>© 2026 시흥거모 호반써밋. All rights reserved.</p>
+          </div>
+        </footer>
+
+
+        <!-- top/bottom 이동버튼 -->
+         <div class="quick-btn">
+            <button type="button" id="toTop" aria-label="맨 위로 이동"><i class="fa-solid fa-arrow-up" style="color: rgb(255, 255, 255);"></i></button>
+            <button type="button" id="toBottom" aria-label="맨 아래로 이동"><i class="fa-solid fa-arrow-down" style="color: rgb(255, 255, 255);"></i></button>
+         </div>
+        
+    </div>
+    
 </body>
 </html>
