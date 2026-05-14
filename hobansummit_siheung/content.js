@@ -23,4 +23,24 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+
+  /* 메인영역 animate show */
+    const animateItems = document.querySelectorAll(".animate");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+
+    });
+  }, {
+    threshold: 0.15
+  });
+
+  animateItems.forEach((item) => {
+    observer.observe(item);
+  });  
+
 });
