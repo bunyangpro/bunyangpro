@@ -19,33 +19,37 @@ visitDates.forEach((dateInput) => {
 
 
 // 전화번호 자동 하이픈
-const phoneInput = document.querySelector("#phoneTop");
+const phoneInputs = document.querySelectorAll(".phone-input");
 
-phoneInput.addEventListener("input", function (e) {
+phoneInputs.forEach((phoneInput) => {
 
-  let value = e.target.value;
+  phoneInput.addEventListener("input", function (e) {
 
-  // 숫자만 남기기
-  value = value.replace(/[^0-9]/g, "");
+    let value = e.target.value;
 
-  // 자동 하이픈
-  if (value.length < 4) {
+    // 숫자만 남기기
+    value = value.replace(/[^0-9]/g, "");
 
-    value = value;
+    // 자동 하이픈
+    if (value.length < 4) {
 
-  } else if (value.length < 8) {
+      value = value;
 
-    value = value.replace(/(\d{3})(\d+)/, "$1-$2");
+    } else if (value.length < 8) {
 
-  } else {
+      value = value.replace(/(\d{3})(\d+)/, "$1-$2");
 
-    value = value.replace(
-      /(\d{3})(\d{4})(\d+)/,
-      "$1-$2-$3"
-    );
+    } else {
 
-  }
+      value = value.replace(
+        /(\d{3})(\d{4})(\d+)/,
+        "$1-$2-$3"
+      );
 
-  e.target.value = value;
+    }
+
+    e.target.value = value;
+
+  });
 
 });
