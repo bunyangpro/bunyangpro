@@ -49,7 +49,8 @@ a {
 /* 헤더 */
 .header-box {
   width: 100%;
-  height: 56px;
+  /* height: 56px; */
+  padding: 0.9rem 0;
   background: #fff;
   position: sticky;
   top: 0;
@@ -69,7 +70,7 @@ a {
 }
 
 .header-phone span {
-  font-size: 13px;
+  font-size: 1rem;
   font-weight: 800;
   color: #c13b24;
 }
@@ -101,7 +102,7 @@ a {
 .main-txt {
   position: relative;
   z-index: 4;
-  padding-top: 145px;
+  padding-top: 130px;
   text-align: center;
   color: #fff;
 }
@@ -113,7 +114,7 @@ a {
 
 .main-txt h2 {
   margin-top: 6px;
-  font-size: 34px;
+  font-size: 40px;
   line-height: 1.1;
   font-weight: 900;
   color: #ffd447;
@@ -121,8 +122,8 @@ a {
 }
 
 .main-txt > p:last-child {
-  margin-top: 10px;
-  font-size: 13px;
+  margin-top: 15px;
+  font-size: 14px;
   font-weight: 500;
 }
 
@@ -133,7 +134,7 @@ a {
   width: calc(100% - 52px);
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 20px;
 }
 
 .benefit-txt {
@@ -141,7 +142,7 @@ a {
   border-radius: 999px;
   background: rgba(255,255,255,.9);
   color: #222;
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 800;
   display: flex;
   align-items: center;
@@ -404,7 +405,6 @@ footer p {
   border-right: 2px solid #fff;
   border-bottom: 2px solid #fff;
   transform: rotate(45deg);
-  margin: -3px;
   animation: arrowDown 1.4s infinite;
 }
 
