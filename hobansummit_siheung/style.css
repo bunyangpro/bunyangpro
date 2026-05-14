@@ -86,7 +86,7 @@ a {
 .main-bg {
   position: absolute;
   inset: 0;
-  background: url("./images/main-1.png") center top / cover no-repeat;
+  background: url("./images/main-sky.jpg") center top / cover no-repeat;
   z-index: 1;
 }
 
