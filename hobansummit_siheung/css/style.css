@@ -338,8 +338,9 @@ footer p {
 /* 하단 고정 버튼 */
 .quick-btn{
   position: fixed;
-  right: 5%;
+  left: calc(50% + 130px);
   bottom: 5%;
+  z-index: 100;
 }
 .quick-btn button:first-child{
   margin-bottom: 0.4rem;
