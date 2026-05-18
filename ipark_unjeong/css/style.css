@@ -160,7 +160,7 @@ a {
 
 .main-txt h2 {
   margin-top: 6px;
-  font-size: 40px;
+  font-size: 34px;
   line-height: 1.1;
   font-weight: 900;
   color: #ffd447;
@@ -198,13 +198,15 @@ a {
 
 .benefit-txt span {
   color: #c13b24;
+  display: inline-block;
+  margin: 0 3px;
 }
 
 .bottom-img {
   position: absolute;
-  left: 50%;
-  bottom: -12px;
-  width: 108%;
+  left: 40%;
+  bottom: 0;
+  width: 130%;
   transform: translateX(-50%);
   z-index: 3;
 }
@@ -325,6 +327,72 @@ section {
   overflow: hidden;
 }
 
+
+/* tab */
+.type-section {
+  padding: 60px 18px;
+  background: #fff;
+  text-align: center;
+}
+
+.type-section h2 {
+  margin-bottom: 24px;
+  font-size: 26px;
+  font-weight: 800;
+  color: #222;
+}
+
+.tab-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.tab-btn {
+  height: 42px;
+  border: 1px solid #ddd;
+  border-radius: 999px;
+  background: #fff;
+  color: #333;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* 첫 줄 3개 */
+.tab-btn:nth-child(1),
+.tab-btn:nth-child(2),
+.tab-btn:nth-child(3) {
+  width: calc((100% - 16px) / 3);
+}
+
+/* 둘째 줄 2개 */
+.tab-btn:nth-child(4),
+.tab-btn:nth-child(5) {
+  width: calc((100% - 16px) / 3);
+}
+
+.tab-btn.active {
+  background: #4b2a20;
+  border-color: #4b2a20;
+  color: #fff;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.tab-content img {
+  width: 100%;
+  display: block;
+}
+
+
 /* 사업개요 */
 .summary {
   background: #fff;
@@ -347,7 +415,6 @@ section {
 }
 
 .summary-icon {
-  width: 38px;
   flex-shrink: 0;
 }
 
