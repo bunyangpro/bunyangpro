@@ -20,7 +20,6 @@ body {
 
 img {
   display: block;
-  width: 100%;
   max-width: 100%;
 }
 
@@ -164,7 +163,7 @@ a {
 }
 
 .site-header.scrolled .header-tel {
-  color: #b52b1e;
+  color: #773423;
 }
 
 /* 메인 */
@@ -270,6 +269,13 @@ section {
   width: 100%;
 }
 
+
+.form-title hr{
+  display: inline-block;
+  width: 50px;
+  background-color: #D3BF88;
+}
+
 .visit-form,
 .summary {
   padding: 54px 28px;
@@ -286,13 +292,13 @@ section {
 .summary h2 {
   font-size: 28px;
   line-height: 1.2;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .form-title h2 p,
 .summary h2 p {
   font-size: 13px;
-  color: #b33a28;
+  color: #773423;
   font-weight: 700;
   margin-bottom: 4px;
 }
@@ -350,7 +356,7 @@ section {
   width: 100%;
   height: 44px;
   border: 0;
-  background: #a94430;
+  background: #773423;
   color: #fff;
   font-size: 14px;
   font-weight: 800;
@@ -381,10 +387,16 @@ section {
   text-align: center;
 }
 
+
+.type-section h2 > p{
+  color: #773423;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
 .type-section h2 {
   margin-bottom: 24px;
   font-size: 26px;
-  font-weight: 800;
+  font-weight: 700;
   color: #222;
 }
 
@@ -397,7 +409,7 @@ section {
 }
 
 .tab-btn {
-  height: 42px;
+  padding: 8px 0;
   border: 1px solid #ddd;
   border-radius: 999px;
   background: #fff;
@@ -462,6 +474,13 @@ section {
 
 .summary-icon {
   flex-shrink: 0;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.summary-icon img {
+  max-width: 100%;
 }
 
 .summary-main-txt {
@@ -512,7 +531,7 @@ footer p {
   border: none;
   border-radius: 50%;
 
-  background: #AC4432;
+  background: #773423;
   backdrop-filter: blur(4px);
 
   color: #fff;
