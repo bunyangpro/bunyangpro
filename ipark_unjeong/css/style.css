@@ -504,13 +504,20 @@ footer {
 }
 
 .logo-box img {
-  width: 80px;
-  margin: 0 auto 14px;
+  width: 180px;
+  margin: 0 auto 8px;
 }
 
 footer p {
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.8;
+  margin-bottom: 8px;
+}
+
+footer p a {
+  display: inline-block;
+  font-size: 18px;
+  margin-left: 3px;
 }
 
 /* 하단 고정 버튼 */
