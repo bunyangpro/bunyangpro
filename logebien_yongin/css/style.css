@@ -133,13 +133,6 @@ a {
   transition: opacity 0.3s ease;
 }
 
-.logo-white {
-  opacity: 1;
-}
-
-.logo-color {
-  opacity: 0;
-}
 
 .header-tel {
   color: #fff;
@@ -154,16 +147,8 @@ a {
   box-shadow: 0 3px 12px rgba(0,0,0,0.12);
 }
 
-.site-header.scrolled .logo-white {
-  opacity: 0;
-}
-
-.site-header.scrolled .logo-color {
-  opacity: 1;
-}
-
 .site-header.scrolled .header-tel {
-  color: #773423;
+  color: #AF906E;
 }
 
 /* 메인 */
@@ -249,9 +234,9 @@ a {
 
 .bottom-img {
   position: absolute;
-  left: 40%;
-  bottom: 0;
-  width: 130%;
+  left: 50%;
+  bottom: -2%;
+  width: 120%;
   transform: translateX(-50%);
   z-index: 3;
 }
@@ -269,6 +254,12 @@ section {
   width: 100%;
 }
 
+.sub-title-color{
+  font-size: 16px;
+  color: #AF906E;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
 
 .form-title hr{
   display: inline-block;
@@ -293,14 +284,6 @@ section {
   font-size: 28px;
   line-height: 1.2;
   font-weight: 700;
-}
-
-.form-title h2 p,
-.summary h2 p {
-  font-size: 13px;
-  color: #773423;
-  font-weight: 700;
-  margin-bottom: 4px;
 }
 
 .form-title > p {
@@ -356,7 +339,7 @@ section {
   width: 100%;
   height: 44px;
   border: 0;
-  background: #773423;
+  background: #AF906E;
   color: #fff;
   font-size: 14px;
   font-weight: 800;
@@ -388,11 +371,6 @@ section {
 }
 
 
-.type-section h2 > p{
-  color: #773423;
-  font-size: 14px;
-  margin-bottom: 5px;
-}
 .type-section h2 {
   margin-bottom: 24px;
   font-size: 26px;
@@ -402,38 +380,25 @@ section {
 
 .tab-menu {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   gap: 8px;
-  margin-bottom: 24px;
+  margin-bottom: 40px;
 }
 
 .tab-btn {
   padding: 8px 0;
   border: 1px solid #ddd;
-  border-radius: 999px;
+  border-radius: 5px;
   background: #fff;
   color: #333;
   font-size: 14px;
   font-weight: 700;
-}
-
-/* 첫 줄 3개 */
-.tab-btn:nth-child(1),
-.tab-btn:nth-child(2),
-.tab-btn:nth-child(3) {
-  width: calc((100% - 16px) / 3);
-}
-
-/* 둘째 줄 2개 */
-.tab-btn:nth-child(4),
-.tab-btn:nth-child(5) {
-  width: calc((100% - 16px) / 3);
+  width: 22%;
 }
 
 .tab-btn.active {
-  background: #4b2a20;
-  border-color: #4b2a20;
+  background: #1C2D56;
+  border-color: #1C2D56;
   color: #fff;
 }
 
@@ -469,8 +434,9 @@ section {
   gap: 12px;
   padding: 14px 16px;
   border-radius: 18px;
-  background: #f7eeee;
+  background: #EDEDED;
 }
+
 
 .summary-icon {
   flex-shrink: 0;
@@ -504,7 +470,7 @@ footer {
 }
 
 .logo-box img {
-  width: 180px;
+  width: 120px;
   margin: 0 auto 8px;
 }
 
@@ -538,7 +504,7 @@ footer p a {
   border: none;
   border-radius: 50%;
 
-  background: #773423;
+  background: #AF906E;
   backdrop-filter: blur(4px);
 
   color: #fff;
