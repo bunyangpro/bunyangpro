@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="브레인시티 마지막 대단지, 평택 비스타 동원">
+    <title>평택 비스타 동원</title>    
+    <!-- 메타태그 -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="평택 비스타 동원">
+    <meta property="og:title" content="평택 비스타 동원">
+    <meta property="og:description" content="브레인시티 마지막 대단지, 평택 비스타 동원">
+    <meta property="og:image" content="https://bunyang-page.com/vista_pyeongtaek/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://bunyang-page.com/vista_pyeongtaek/">
+    <meta property="og:locale" content="ko_KR">
+
+    <!-- Twitter / Kakao 미리보기 보조 -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="평택 비스타 동원 방문예약">
+    <meta name="twitter:description" content="브레인시티 마지막 대단지, 평택 비스타 동원">
+    <meta name="twitter:image" content="https://bunyang-page.com/vista_pyeongtaek/images/og-image.jpg">
+    <!-- css 및 폰트어썸 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./css/import.css">
+
+    <!-- js -->
+    <script src="./js/header.js" defer></script>
+    <script src="./js/content.js" defer></script>
+    <script src="./js/date.js" defer></script>
+    <script src="./js/form.js" defer></script>
+    <script src="./js/tab.js" defer></script>
+</head>
+<body>
+
+    <!-- 전체 랜딩 wrap -->
+    <div class="wrap">
+        <!-- 헤더영역 -->
+        <header class="site-header" id="siteHeader">
+            <!-- 메인헤더 -->
+            <div class="header-inner">
+                <!-- 로고 -->
+                 <h1 class="logo">
+                    <a href="#section1">
+                         <!-- 로고  -->
+                         <img src="./images/logo.svg" alt="평택 비스타동원 로고" class="header-logo">
+                    </a>
+                 </h1>
+
+                <!-- 전화번호 -->
+                <div class="header-phone shake">
+                    <a href="tel:1660-2688" class="header-tel">
+                        <span>1660-2688</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- 섹션1 - 메인영역 -->
+        <section id="section1" class="main-section">
+           <div class="main-bg"></div>
+               <div class="main-txt">
+               <!-- 메인 타이틀 영역 -->
+                   <p class="sub-title">브레인시티 마지막 대단지</p>
+                   <h2>평택 비스타 동원</h2>
+                   <p>1군 브랜드 대단지 아파트</p>
+               </div>
+               <!-- 혜택 문구 영역 -->
+                <div class="main-benefits">
+                   <div class="benefit-txt animate">1군 아파트 <span>총 1,600세대</span> 브랜드 대단지</div>
+                   <div class="benefit-txt animate"><span>500만원</span> 계약축하금 페이백, 입주까지 0원!</div>
+                   <div class="benefit-txt animate"><span>삼성전자·카이스트·아주대병원</span> 확정 수혜지</div>
+                </div>
+               <!-- 스크롤 애니메이션 -->
+                <div class="scroll-down">
+                   <div class="scroll-icon">
+                       <span class="arrow"></span>
+                       <span class="arrow"></span>
+                       <span class="arrow"></span>
+                   </div>
+                </div>
+               <!-- 하단 아파트 이미지 -->
+               <div class="bottom-img">
+                   <img src="./images/main-1.png" alt="운정 아이파크 포레스트">
+               </div>
+               <!-- 그라디언트 -->
+                <div class="main-gradient"></div>
+        </section>
+
+        <!-- 방문예약 영역 -->
+        <section id="section2" class="visit-form">
+           <div class="form-title">
+               <h2>
+                   <p class="sec-sub-title">평택 브레인시티 비스타동원</p>
+                   방문예약
+               </h2>
+               <hr>
+               <p>모델하우스 관람은 사전예약제로 운영됩니다.</p>
+           </div>
+
+           <!-- 방문예약 제출폼 -->
+           <form id="reserveForm">
+               <input type="hidden" name="project" value="평택브레인시티_정유진팀장">
+               <div class="form-group">
+                   <label for="nameTop">예약자 성함</label>
+                   <input type="text" name="name" id="nameTop" placeholder="성함을 입력해주세요." required>
+               </div>
+               <div class="form-group">
+                   <label for="phoneTop">연락처</label>
+                   <input type="tel" class="phone-input" id="phoneTop" name="phone" placeholder="전화번호를 입력해주세요." pattern="010-[0-9]{4}-[0-9]{4}" maxlength="13" required>
+               </div>
+               <div class="form-group">
+                   <label for="visitTop">방문 희망일</label>
+                   <input type="date" name="visitDate" id="visitTop" required>
+               </div>
+               <div class="form-group">
+                   <label for="timeTop">방문 희망 시간</label>
+                   <select name="visitTime" id="timeTop">
+                       <option value="10:00">10:00</option>
+                       <option value="11:00">11:00</option>
+                       <option value="12:00">12:00</option>
+                       <option value="13:00">13:00</option>
+                       <option value="14:00">14:00</option>
+                       <option value="15:00">15:00</option>
+                       <option value="16:00">16:00</option>
+                       <option value="17:00">17:00</option>
+                   </select>
+               </div>
+
+               <!-- 이용약관 영역 -->
+               <div class="privary-group">
+                   <div class="pravicy-content">
+                       1. 본 서비스는 이용자가 입력한 정보를 바탕으로 상담 및 방문 예약 연결 서비스를 제공합니다.<br>
+
+                        2. 이용자가 작성한 개인정보는 상담 요청 및 분양 안내 목적으로 활용되며, 관련 서비스 제공 업체에 전달될 수 있습니다. <br>
+
+                        3. 애드프로컴퍼니는 광고 운영 및 상담 신청 접수 역할을 수행하며, 이후 실제 계약 및 상담 진행에 대해서는 직접 관여하지 않습니다. <br>
+
+                        4. 이용자는 본인의 정보를 정확하게 입력해야 하며, 허위 또는 타인의 정보를 입력할 경우 이에 대한 책임은 이용자 본인에게 있습니다. <br>
+
+                        5. 본 약관은 관련 법령 및 정책 변경에 따라 수정될 수 있습니다. <br>
+
+                        시행일 : 2025년 11월 11일
+                   </div>
+                   <label class="privacy-agree">
+                       <input type="checkbox" name="agree" id="agree" required>
+                       개인정보 수집 및 이용에 동의합니다.
+                   </label>
+               </div>
+
+               <!-- 제출하기 버튼 -->
+               <button type="submit" class="submitBtn">제출하기</button>
+           </form>
+        </section>
+
+        <section id="section3" class="details">
+        <h2 class="hidden">평택 브레인시티 비스타동원</h2>
+        <div class="details-img">
+            <img src="./images/section-1.png" alt="평택 브레인시티 비스타동원 프리미엄 소개">
+        </div>
+        <div class="details-img">
+            <img src="./images/section-2.png" alt="평택 브레인시티 비스타동원 프리미엄 소개">
+        </div>
+        </section>
+
+        <!-- 평형안내(타입) 영역 -->
+        <section class="type-section">
+            <h2>
+                <p class="sec-sub-title">평택 브레인시티 비스타동원</p>
+                평형안내
+            </h2>
+            <div class="tab-menu">
+                <button class="tab-btn active" data-tab="type1" >59㎡</button>
+                <button class="tab-btn" data-tab="type2" >84㎡A</button>
+                <button class="tab-btn" data-tab="type3" >84㎡B</button>
+                <button class="tab-btn" data-tab="type4" >84㎡C</button>
+                <button class="tab-btn" data-tab="type5" >106㎡</button>
+            </div>
+            <div class="tab-content active" id="type1">
+                <img src="./images/59.png" alt="59 타입 평면도 이미지 및 내용">
+            </div>
+            <div class="tab-content" id="type2">
+                <img src="./images/84a.png" alt="84A 타입 평면도 이미지 및 내용">
+            </div>
+            <div class="tab-content" id="type3">
+                <img src="./images/84b.png" alt="84B 타입 평면도 이미지 및 내용">
+            </div>
+            <div class="tab-content" id="type4">
+                <img src="./images/84c.png" alt="84C 타입 평면도 이미지 및 내용">
+            </div>
+            <div class="tab-content" id="type5">
+                <img src="./images/106.png" alt="106 타입 평면도 이미지 및 내용">
+            </div>
+        </section>
+
+        <!-- 사업개요 영역 -->
+        <section id="section4" class="summary">
+        <h2>
+            <p class="sec-sub-title">평택 브레인시티 비스타동원</p>
+            사업개요
+        </h2>
+        <ul class="summary-list">
+            <li>
+                <div class="summary-box">
+                    <div class="summary-icon"><img src="./images/summary-1.svg" alt="대지위치"></div>
+                    <div class="summary-txt">
+                        <p class="summary-main-txt">대지위치</p>
+                        <p class="summary-sub-txt">평택브레인시티 일반산업단지 공동 4BL</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="summary-box">
+                    <div class="summary-icon"><img src="./images/summary-2.svg" alt="대지면적"></div>
+                    <div class="summary-txt">
+                        <p class="summary-main-txt">대지면적</p>
+                        <p class="summary-sub-txt">81,959㎡ (약 24,792.60평)</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="summary-box">
+                    <div class="summary-icon"><img src="./images/summary-3.svg" alt="규모"></div>
+                    <div class="summary-txt">
+                        <p class="summary-main-txt">규모</p>
+                        <p class="summary-sub-txt">지하2층, 지상 26~35층 14개 동 및 부대복리시설</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="summary-box">
+                    <div class="summary-icon"><img src="./images/summary-4.svg" alt="타입"></div>
+                    <div class="summary-txt">
+                        <p class="summary-main-txt">타입</p>
+                        <p class="summary-sub-txt">59A㎡, 84A㎡, 84B㎡, 84C㎡, 106A㎡</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        </section>
+
+        <!-- 방문예약 영역 -->
+        <section id="section5" class="visit-form">
+        <div class="form-title">
+            <h2>
+                <p class="sec-sub-title">평택 브레인시티 비스타동원</p>
+                방문예약
+            </h2>
+            <hr>
+            <p>모델하우스 관람은 사전예약제로 운영됩니다.</p>
+        </div>
+
+        <!-- 방문예약 제출폼 -->
+        <form id="reserveForm">
+            <input type="hidden" name="project" value="평택브레인시티_정유진팀장">
+            <div class="form-group">
+                <label for="nameTop">예약자 성함</label>
+                <input type="text" name="name" id="nameTop" placeholder="성함을 입력해주세요." required>
+            </div>
+            <div class="form-group">
+                <label for="phoneTop">연락처</label>
+                <input type="tel" class="phone-input" id="phoneTop" name="phone" placeholder="전화번호를 입력해주세요." pattern="010-[0-9]{4}-[0-9]{4}" maxlength="13" required>
+            </div>
+            <div class="form-group">
+                <label for="visitTop">방문 희망일</label>
+                <input type="date" name="visitDate" id="visitTop" required>
+            </div>
+            <div class="form-group">
+                <label for="timeTop">방문 희망 시간</label>
+                <select name="visitTime" id="timeTop">
+                    <option value="10:00">10:00</option>
+                    <option value="11:00">11:00</option>
+                    <option value="12:00">12:00</option>
+                    <option value="13:00">13:00</option>
+                    <option value="14:00">14:00</option>
+                    <option value="15:00">15:00</option>
+                    <option value="16:00">16:00</option>
+                    <option value="17:00">17:00</option>
+                </select>
+            </div>
+
+            <!-- 이용약관 영역 -->
+            <div class="privary-group">
+                <div class="pravicy-content">
+                    1. 본 서비스는 이용자가 입력한 정보를 바탕으로 상담 및 방문 예약 연결 서비스를 제공합니다.<br>
+
+                    2. 이용자가 작성한 개인정보는 상담 요청 및 분양 안내 목적으로 활용되며, 관련 서비스 제공 업체에 전달될 수 있습니다. <br>
+
+                    3. 애드프로컴퍼니는 광고 운영 및 상담 신청 접수 역할을 수행하며, 이후 실제 계약 및 상담 진행에 대해서는 직접 관여하지 않습니다. <br>
+
+                    4. 이용자는 본인의 정보를 정확하게 입력해야 하며, 허위 또는 타인의 정보를 입력할 경우 이에 대한 책임은 이용자 본인에게 있습니다. <br>
+
+                    5. 본 약관은 관련 법령 및 정책 변경에 따라 수정될 수 있습니다. <br>
+
+                    시행일 : 2025년 11월 11일
+                </div>
+                <label class="privacy-agree">
+                    <input type="checkbox" name="agree" id="agree" required>
+                    개인정보 수집 및 이용에 동의합니다.
+                </label>
+            </div>
+
+            <!-- 제출하기 버튼 -->
+            <button type="submit" class="submitBtn">제출하기</button>
+        </form>
+        </section>
+
+        <!-- 푸터 -->
+        <footer>
+          <div class="fotter-box">
+              <div class="logo-box"><img src="./images/logo.svg" alt="운정 아이파크 포레스트 로고"></div>
+              <p>문의하기 <a href="tel:1660-2688">1660-2688</a></p>
+              <p>© 2026 평택브레인시티비스타동원. All rights reserved.</p>
+          </div>
+        </footer>
+
+
+        <!-- top/bottom 이동버튼 -->
+         <div class="quick-btn">
+            <button type="button" id="toTop" aria-label="맨 위로 이동"><i class="fa-solid fa-arrow-up" style="color: rgb(255, 255, 255);"></i></button>
+            <button type="button" id="toBottom" aria-label="맨 아래로 이동"><i class="fa-solid fa-arrow-down" style="color: rgb(255, 255, 255);"></i></button>
+         </div>
+        
+    </div>
+    
+</body>
+</html>
