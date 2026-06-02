@@ -184,19 +184,21 @@ a {
 .main-txt {
   position: relative;
   z-index: 4;
-  padding-top: 130px;
+  padding-top: 170px;
+  margin-bottom: 80px;
   text-align: center;
   color: #fff;
 }
 
 .main-txt .sub-title {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
+  margin-bottom: 10px;
 }
 
 .main-txt h2 {
   margin-top: 6px;
-  font-size: 34px;
+  font-size: 38px;
   line-height: 1.1;
   font-weight: 900;
   color: #ffd447;
@@ -205,7 +207,7 @@ a {
 
 .main-txt > p:last-child {
   margin-top: 15px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
 }
 
@@ -220,22 +222,26 @@ a {
 }
 
 .benefit-txt {
-  height: 38px;
   border-radius: 999px;
   background: rgba(255,255,255,.9);
   color: #222;
-  font-size: 14px;
-  font-weight: 800;
+  font-size: 16px;
+  font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 7px 18px rgba(0,0,0,.25);
+  padding: 15px 0;
+  border: 1px solid #1B3F8B;
 }
+
+
 
 .benefit-txt span {
   color: #c13b24;
   display: inline-block;
   margin: 0 3px;
+  font-weight: 800;
 }
 
 .bottom-img {
