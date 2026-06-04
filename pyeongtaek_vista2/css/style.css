@@ -397,12 +397,12 @@ section {
 }
 
 .tab-btn {
-  padding: 8px 0;
+  padding: 10px 0;
   border: 1px solid #ddd;
-  border-radius: 999px;
+  border-radius: 15px;
   background: #fff;
   color: #333;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 500;
   font-family: 'pretendard', sans-serif;
 }
