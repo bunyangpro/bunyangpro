@@ -9,4 +9,14 @@ document.addEventListener("DOMContentLoaded", function () {
       header.classList.remove("scrolled");
     }
   });
+
+  const logo = document.querySelector(".header-logo");
+  
+  window.addEventListener("scroll", () => { 
+    if (window.scrollY > 60) { 
+      header.classList.add("scrolled"); logo.src = "./images/logo-color.svg"; 
+    } else { 
+      header.classList.remove("scrolled"); logo.src = "./images/logo-white.svg"; 
+    }});
 });
+

@@ -45,51 +45,6 @@ a {
   }
 }
 
-/* 이벤트 배너 팝업 */
-/* event popup */
-.event-popup {
-  position: fixed;
-  inset: 0;
-  z-index: 10000;
-  background: rgba(0,0,0,.65);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-}
-
-.event-popup.hide {
-  display: none;
-}
-
-.event-popup-box {
-  position: relative;
-  width: 100%;
-  max-width: 430px;
-  border-radius: 14px;
-  overflow: hidden;
-  background: #fff;
-}
-
-.event-popup-box img {
-  display: block;
-  width: 100%;
-}
-
-.event-close {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  width: 32px;
-  height: 32px;
-  border: 0;
-  border-radius: 50%;
-  background: rgba(0,0,0,.65);
-  color: #fff;
-  font-size: 22px;
-  cursor: pointer;
-  z-index: 2;
-}
 
 /* 헤더 */
 .site-header {
@@ -118,7 +73,7 @@ a {
 /* 로고 */
 .logo {
   margin: 0;
-  width: 50px;
+  width: 120px;
   flex-shrink: 0;
 }
 
@@ -143,21 +98,20 @@ a {
   transition: color 0.3s ease;
 }
 
+
 /* 스크롤시 */
 .site-header.scrolled {
-  background: rgba(255,255,255,0.96);
-
-  backdrop-filter: blur(10px);
-
-  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-
+  background: rgba(255,255,255,0.96); 
+  backdrop-filter: blur(10px); 
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08); 
   padding: 14px 0;
 }
 
 /* 스크롤시 전화번호 색상 */
-.site-header.scrolled .header-tel {
-  color: #B31217;
+.site-header.scrolled .header-tel { 
+  color: #B68B4C; 
 }
+
 
 /* 메인 */
 .main-section {
@@ -171,7 +125,6 @@ a {
 .main-bg {
   position: absolute;
   inset: 0;
-  background: url("../images/main-sky.jpg") center top / cover no-repeat;
   z-index: 1;
 }
 
@@ -186,8 +139,8 @@ a {
 .main-txt {
   position: relative;
   z-index: 4;
-  padding-top: 170px;
-  margin-bottom: 80px;
+  padding-top: 150px;
+  margin-bottom: 40px;
   text-align: center;
   color: #fff;
 }
@@ -216,32 +169,56 @@ a {
 .main-benefits {
   position: relative;
   z-index: 5;
-  margin: 36px auto 0;
-  width: calc(100% - 52px);
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  margin: 36px auto;
+  width: 76%;
 }
 
 .benefit-txt {
   padding: 15px 0;
-  border-radius: 999px;
-  background: rgba(255,255,255,.9);
-  color: #222;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.65);
   font-size: 16px;
   font-weight: 700;
   display: flex;
   align-items: center;
-  justify-content: center;
   box-shadow: 0 7px 18px rgba(0,0,0,.25);
   border: 1px solid #D9B46B;
 }
 
-.benefit-txt span {
-  color: #D41212;
-  display: inline-block;
-  margin: 0 3px;
-  font-weight: 800;
+
+.benefit-txt:not(:last-of-type) {
+  margin-bottom: 14px;
+}
+
+.benefit-txt .left-icon {
+  width: 100px;
+  display: flex;
+  flex: 0 0 100px;
+  align-items: center;
+  justify-content: center;
+}
+
+.benefit-txt .left-icon img {
+  display: block;
+  border: 1px solid #D9B46B;
+  padding: 8px;
+  box-sizing: border-box;
+  border-radius: 100%;
+}
+
+.benefit-txt .right-txt {
+  color: #fff;
+}
+
+.benefit-txt .right-txt h4 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+.benefit-txt .right-txt p {
+  color: #D3BF88;
+  font-weight: 600;
 }
 
 .bottom-img {
@@ -269,7 +246,7 @@ section {
 
 .sec-sub-title{
   font-size: 16px;
-  color: #B31217;
+  color: #B68B4C;
   margin-bottom: 5px;
 }
 
@@ -377,7 +354,7 @@ section {
 
 /* tab */
 .type-section {
-  padding: 60px 18px;
+  padding: 60px 20px;
   background: #fff;
   text-align: center;
 }
@@ -390,13 +367,21 @@ section {
 
 .tab-menu {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  overflow-x: auto;
+  scrollbar-width: none;
   gap: 8px;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
 }
 
+/*
+.tab-menu::-webkit-scrollbar {
+  display: none;
+}
+*/
+
 .tab-btn {
+  flex: 0 0 auto;
+  min-width: 90px;
   padding: 10px 0;
   border: 1px solid #ddd;
   border-radius: 15px;
