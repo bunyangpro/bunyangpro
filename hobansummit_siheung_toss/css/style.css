@@ -407,6 +407,10 @@ footer .dev-box .developer {
   margin-bottom: 15px;
 }
 
+footer .dev-box .advertiser {
+  font-size: 14px;
+}
+
 footer .dev-box .advertiser > * {
   display: inline-block;
   margin-bottom: 5px;
