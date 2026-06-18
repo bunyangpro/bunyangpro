@@ -201,6 +201,11 @@ a {
   color: #c13b24;
 }
 
+
+.benefit-txt:last-of-type span {
+  margin-right: 5px;
+}
+
 .bottom-img {
   position: absolute;
   left: 50%;
