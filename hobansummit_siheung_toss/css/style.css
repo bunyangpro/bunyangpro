@@ -201,6 +201,9 @@ a {
   color: #c13b24;
 }
 
+.benefit-txt:nth-of-type(2) span {
+  margin: 0 5px;
+}
 
 .benefit-txt:last-of-type span {
   margin-right: 5px;
