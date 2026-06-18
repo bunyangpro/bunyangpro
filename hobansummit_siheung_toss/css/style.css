@@ -374,7 +374,7 @@ section {
 
 /* 푸터 */
 footer {
-  padding: 38px 20px;
+  padding: 38px 35px;
   background: #26221f;
   color: #fff;
   text-align: center;
@@ -386,8 +386,53 @@ footer {
 }
 
 footer p {
-  font-size: 11px;
-  line-height: 1.8;
+  font-size: 14px;
+}
+
+footer .dev-box {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ebebe6;
+}
+
+footer .dev-box span {
+  font-size: 12px;
+}
+
+footer .dev-box .contractor {
+  margin-bottom: 10px;
+}
+
+footer .dev-box .developer {
+  margin-bottom: 15px;
+}
+
+footer .dev-box .advertiser > * {
+  display: inline-block;
+  margin-bottom: 5px;
+  font-size: 12px;
+}
+
+footer .dev-box .ad-name {
+  border-right: 1px solid #fff;
+  padding-right: 5px;
+  display: inline-block;
+  text-align: center;
+}
+
+footer .dev-box .ad-address {
+  font-size: 12px;
+}
+
+footer .inquiry {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+footer .inquiry a {
+  display: inline-block;
+  font-size: 22px;
+  font-weight: 800;
 }
 
 /* 하단 고정 버튼 */
