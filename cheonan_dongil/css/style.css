@@ -464,22 +464,35 @@ footer {
   text-align: center;
 }
 
+.logo-box {
+  margin-bottom: 20px;
+}
+
 .logo-box img {
   width: 100px;
   margin: 0 auto 15px;
 }
 
 footer p {
-  font-size: 12px;
-  line-height: 1.8;
   margin-bottom: 8px;
 }
+
+footer .ad-box {
+  margin-bottom: 30px;
+  font-size: 13px;
+} 
+
+footer .ad-box .ad-address span {
+  line-height: 1.4;
+}
+
 
 .footer-call{
     display:flex;
     align-items:center;
     justify-content:center;
     gap:10px;
+    margin-bottom: 20px;
 }
 
 .footer-call a{
@@ -495,6 +508,10 @@ footer p {
     width: 30px;
     max-width: 100%;
     display:block;
+}
+
+.footer-box > p:last-child {
+  font-size: 12px;
 }
 
 /* 하단 고정 버튼 */
