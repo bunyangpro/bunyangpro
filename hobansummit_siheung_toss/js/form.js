@@ -1,25 +1,38 @@
 document.addEventListener("DOMContentLoaded", function () {
-    /*폼 제출시 시트로 전달*/
-    const forms = document.querySelectorAll("#reserveForm");
 
-    forms.forEach(function (form) {
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
+  // 폼 제출 시 시트로 전달
 
-        const scriptURL = "https://script.google.com/macros/s/AKfycbwr7rtrF024xwtrw4Lmxx9Ba0g0DStHex_c_REnuUxyWt2LfKnID-CFg7oFtBfES3Ju3g/exec";
+  const forms = document.querySelectorAll("#reserveForm");
 
-        const formData = new FormData(form);
+  forms.forEach(function (form) {
 
-        fetch(scriptURL, {
-          method: "POST",
-          body: formData,
-          mode: "no-cors"
-        });
+    form.addEventListener("submit", function (e) {
 
-        alert("예약 신청이 완료되었습니다.");
+      e.preventDefault();
+
+      const scriptURL = "https://script.google.com/macros/s/AKfycbwr7rtrF024xwtrw4Lmxx9Ba0g0DStHex_c_REnuUxyWt2LfKnID-CFg7oFtBfES3Ju3g/exec";
+
+      const formData = new FormData(form);
+
+      fetch(scriptURL, {
+
+        method: "POST",
+        body: formData,
+        mode: "no-cors"
+
+      })
+      .then(() => {
+
         form.reset();
+        window.location.href = "./complete/";
+
+      })
+      .catch((error) => {
+
+        console.error(error);
+        alert("전송 중 오류가 발생했습니다.");
+        
       });
     });
-
-    
+  });
 });
