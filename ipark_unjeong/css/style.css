@@ -505,12 +505,10 @@ footer {
 
 .logo-box img {
   width: 180px;
-  margin: 0 auto 8px;
+  margin: 0 auto 20px;
 }
 
 footer p {
-  font-size: 12px;
-  line-height: 1.8;
   margin-bottom: 8px;
 }
 
@@ -518,6 +516,18 @@ footer p a {
   display: inline-block;
   font-size: 18px;
   margin-left: 3px;
+}
+footer .ad-box {
+  margin-bottom: 30px;
+  font-size: 13px;
+} 
+
+footer .ad-box .ad-address span {
+  line-height: 1.4;
+}
+
+.footer-box > p:last-child {
+  font-size: 12px;
 }
 
 /* 하단 고정 버튼 */
