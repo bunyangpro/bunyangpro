@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=390, initial-scale=1.0, maximum-scale=1.0" />
+<title>시흥거모 호반써밋 상담 랜딩</title>
+<style>
+/* ================================
+   기본 설정
+================================ */
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,"Pretendard","Noto Sans KR",Arial,sans-serif;color:#111;background:#fff;line-height:1.55;padding-bottom:88px;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+button,input,select,textarea{font-family:inherit}
+.wrap{width:390px;max-width:390px;margin:0 auto;background:#fff;overflow:hidden;position:relative}
+
+/* ================================
+   공통 애니메이션
+================================ */
+.js-ani{opacity:0;transform:translateY(34px);transition:opacity .8s ease,transform .8s ease}
+.js-ani.on{opacity:1;transform:translateY(0)}
+.hero .js-ani{transition-duration:.75s}
+.pulse{animation:pulse 1.8s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:translateX(-50%) scale(1)}50%{transform:translateX(-50%) scale(1.035)}}
+
+/* ================================
+   HERO 영역
+   배경 이미지는 아래 background-image만 교체하세요.
+================================ */
+.hero{min-height:660px;position:relative;color:#fff;padding:22px 20px 92px;background-image:linear-gradient(to bottom,rgba(6,44,83,.08),rgba(0,0,0,.28) 40%,rgba(0,0,0,.62)),url('hero-bg.jpg');background-size:cover;background-position:center top;display:flex;flex-direction:column;justify-content:flex-start}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:105px;background:linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0,.85));pointer-events:none}
+.hero-top{position:relative;z-index:2;display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:160px}
+.logo{font-weight:900;letter-spacing:-.04em;line-height:.9;font-size:17px;color:#10295b;text-shadow:0 1px 2px rgba(255,255,255,.35)}
+.logo small{display:block;font-size:8px;letter-spacing:.18em;color:#b48b53;margin-bottom:2px}
+.call-btn{width:48px;height:48px;border:2px solid #fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:27px;background:rgba(255,255,255,.08);backdrop-filter:blur(3px)}
+.hero-content{position:relative;z-index:2;text-align:center;margin-top:-14px}
+.eyebrow{font-size:18px;font-weight:800;letter-spacing:-.04em;margin-bottom:4px;text-shadow:0 2px 6px rgba(0,0,0,.35)}
+.hero h1{font-size:38px;line-height:1.05;font-weight:1000;letter-spacing:-.08em;color:#ffef1d;text-shadow:0 3px 8px rgba(0,0,0,.45);margin-bottom:4px}
+.hero-sub{font-size:14px;font-weight:700;opacity:.95;margin-bottom:18px;text-shadow:0 2px 5px rgba(0,0,0,.35)}
+.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin:0 auto 8px;max-width:390px}
+.info-card{background:rgba(0,0,0,.64);border:1px solid rgba(255,255,255,.23);border-radius:18px;padding:14px 4px 13px;min-height:118px;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 9px 18px rgba(0,0,0,.22);backdrop-filter:blur(4px)}
+.info-icon{font-size:25px;margin-bottom:7px;color:#fff}
+.info-title{font-size:14px;font-weight:800;color:#fff;line-height:1.15}
+.info-main{font-size:19px;font-weight:1000;color:#c9a267;line-height:1.15;margin-top:4px;letter-spacing:-.05em}
+.hero-list{display:flex;flex-direction:column;gap:7px;max-width:390px;margin:0 auto 22px}
+.hero-list li{list-style:none;display:flex;align-items:center;gap:12px;background:rgba(0,0,0,.63);border:1px solid rgba(255,255,255,.16);border-radius:13px;padding:11px 18px;text-align:left;font-size:14px;font-weight:800;color:#fff;backdrop-filter:blur(4px)}
+.hero-list b{font-size:21px;color:#d1aa6b;width:24px;text-align:center}
+.down-arrow{font-size:34px;line-height:.7;font-weight:200;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.55);animation:down 1.4s infinite ease-in-out}
+@keyframes down{0%,100%{transform:translateY(0);opacity:.6}50%{transform:translateY(8px);opacity:1}}
+
+/* ================================
+   따라다니는 CTA 버튼
+================================ */
+.sticky-cta{position:fixed;left:50%;bottom:12px;transform:translateX(-50%);width:calc(100% - 34px);max-width:356px;height:62px;border:0;border-radius:0 0 22px 22px;background:#090909;color:#d0a35e;font-size:25px;font-weight:1000;letter-spacing:-.06em;z-index:9999;box-shadow:0 8px 24px rgba(0,0,0,.32);cursor:pointer}
+.sticky-cta::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:linear-gradient(90deg,transparent,#b99157,transparent);opacity:.75}
+
+/* ================================
+   우측 TOP / BOTTOM 버튼
+================================ */
+.quick-nav{position:fixed;right:12px;bottom:92px;z-index:9998;display:flex;flex-direction:column;gap:12px}
+.quick-nav button{width:46px;height:46px;border-radius:50%;border:0;background:#c9151e;color:#fff;font-size:26px;font-weight:900;box-shadow:0 5px 14px rgba(0,0,0,.25);cursor:pointer;line-height:1}
+
+/* ================================
+   섹션 공통
+================================ */
+.section{padding:58px 24px;text-align:center;background:#fff}
+.section-title{font-size:28px;line-height:1.18;font-weight:1000;letter-spacing:-.06em;color:#09143b;margin-bottom:34px}
+.section-title.black{color:#090909}
+
+/* ================================
+   문의 안내 아이콘 4개
+================================ */
+.guide-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px 18px;max-width:270px;margin:0 auto}
+.guide-item .ico{font-size:35px;color:#c9a267;margin-bottom:6px}
+.guide-item strong{display:block;font-size:18px;font-weight:1000;letter-spacing:-.05em;color:#111;line-height:1.2}
+.guide-item span{display:block;font-size:14px;font-weight:700;color:#111;margin-top:3px}
+
+/* ================================
+   핵심 장점
+================================ */
+.benefits{padding-top:64px}
+.benefit-list{display:flex;flex-direction:column;gap:44px;max-width:330px;margin:0 auto}
+.benefit-item .check{font-size:25px;color:#43ad4f;font-weight:900;margin-bottom:4px}
+.benefit-item strong{font-size:21px;font-weight:1000;letter-spacing:-.05em;display:block;margin-bottom:9px}
+.benefit-item p{font-size:16px;font-weight:650;letter-spacing:-.04em;line-height:1.55}
+
+/* ================================
+   추천 대상
+================================ */
+.recommend-list{display:flex;flex-direction:column;gap:10px;max-width:315px;margin:0 auto;text-align:left}
+.recommend-list li{list-style:none;font-size:19px;font-weight:800;letter-spacing:-.05em;display:flex;align-items:center;gap:10px}
+.recommend-list b{color:#41a84c;font-size:24px;line-height:1}
+
+/* ================================
+   상담 신청 폼
+================================ */
+.form-section{padding:58px 34px 44px;background:#fff}
+.form-section .section-title{color:#090909;margin-bottom:8px}
+.form-desc{font-size:16px;font-weight:650;margin-bottom:34px;letter-spacing:-.04em}
+.form-box{text-align:left;max-width:330px;margin:0 auto}
+.form-row{margin-bottom:12px}
+.form-row label{display:block;font-size:12px;font-weight:700;color:#333;margin-bottom:4px}
+.form-row input,.form-row select{width:100%;height:38px;border:1px solid #cfcfcf;background:#fff;padding:0 10px;font-size:14px;outline:none}
+.notice{height:78px;overflow:auto;border:1px solid #cfcfcf;background:#fafafa;font-size:8px;line-height:1.4;color:#555;padding:7px;margin:12px 0}
+.agree{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;margin-bottom:18px}
+.agree input{width:18px;height:18px}
+.submit-btn{width:100%;height:56px;border:0;background:#bd111b;color:#fff;font-size:19px;font-weight:1000;cursor:pointer}
+
+/* ================================
+   푸터
+================================ */
+.footer{background:#252525;color:#fff;text-align:center;padding:46px 20px 34px;font-size:12px}
+.footer strong{font-size:18px}.footer p{opacity:.7;margin-top:16px;font-size:10px}
+
+/* ================================
+   모바일 고정 기준
+   실제 모바일에서도 390px 디자인 기준으로 동일하게 보이도록 viewport를 390으로 고정했습니다.
+================================ */
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ================================
+       HERO 영역
+  ================================ -->
+  <section class="hero" id="top">
+    <div class="hero-top js-ani">
+      <div class="logo"><small>GEOMO</small>SUMMIT</div>
+      <a href="tel:16006123" class="call-btn" aria-label="전화문의">☎</a>
+    </div>
+
+    <div class="hero-content">
+      <p class="eyebrow js-ani">계약금 5%, 비규제 지역!</p>
+      <h1 class="js-ani">시흥거모 호반써밋</h1>
+      <p class="hero-sub js-ani">84㎡ 단일평형, 지금 상담 가능!</p>
+
+      <!-- 정보 카드 3개 -->
+      <div class="info-grid">
+        <div class="info-card js-ani">
+          <div class="info-icon">◉</div>
+          <div class="info-title">계약금</div>
+          <div class="info-main">500만 원</div>
+        </div>
+        <div class="info-card js-ani">
+          <div class="info-icon">▦</div>
+          <div class="info-title">총</div>
+          <div class="info-main">353세대</div>
+        </div>
+        <div class="info-card js-ani">
+          <div class="info-icon">▥</div>
+          <div class="info-title">정부</div>
+          <div class="info-main">지원대출</div>
+        </div>
+      </div>
+
+      <!-- HERO 포인트 리스트 -->
+      <ul class="hero-list">
+        <li class="js-ani"><b>◆</b> 초·중·고 학교 도보 통학</li>
+        <li class="js-ani"><b>▣</b> 다수 고속도로 및 인근 더블 역세권</li>
+      </ul>
+
+      <div class="down-arrow js-ani">⌄<br>⌄</div>
+    </div>
+  </section>
+
+  <!-- ================================
+       지금 문의 안내 영역
+  ================================ -->
+  <section class="section js-ani">
+    <h2 class="section-title">지금 문의하시면 바로 안내!</h2>
+    <div class="guide-grid">
+      <div class="guide-item js-ani"><div class="ico">▦</div><strong>잔여세대</strong><span>실시간 확인</span></div>
+      <div class="guide-item js-ani"><div class="ico">◉</div><strong>분양가</strong><span>정확한 정보</span></div>
+      <div class="guide-item js-ani"><div class="ico">▤</div><strong>계약조건</strong><span>맞춤 안내</span></div>
+      <div class="guide-item js-ani"><div class="ico">▣</div><strong>방문 일정</strong><span>간편 안내</span></div>
+    </div>
+  </section>
+
+  <!-- ================================
+       핵심 장점 영역
+  ================================ -->
+  <section class="section benefits js-ani">
+    <h2 class="section-title black">시흥거모 호반써밋<br>핵심 장점!</h2>
+    <div class="benefit-list">
+      <div class="benefit-item js-ani">
+        <div class="check">✔</div>
+        <strong>더블 생활권</strong>
+        <p>시흥 거모지구 중심 인프라와<br>안산 생활권의 더블 생활권</p>
+      </div>
+      <div class="benefit-item js-ani">
+        <div class="check">✔</div>
+        <strong>사통팔달 교통</strong>
+        <p>다수 고속도로 및 인근<br>더블 역세권 전철역 연계</p>
+      </div>
+      <div class="benefit-item js-ani">
+        <div class="check">✔</div>
+        <strong>총 353세대</strong>
+        <p>1군 브랜드 시공 및 고품격 커뮤니티</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================
+       추천 대상 영역
+  ================================ -->
+  <section class="section js-ani">
+    <h2 class="section-title black">이런 분들께 추천!</h2>
+    <ul class="recommend-list">
+      <li class="js-ani"><b>⌕</b> 분양가 비교중이신 분</li>
+      <li class="js-ani"><b>⌕</b> 실입주금이 궁금하신 분</li>
+      <li class="js-ani"><b>⌕</b> 잔여세대가 궁금하신 분</li>
+      <li class="js-ani"><b>⌕</b> 방문 전 조건 확인이 필요하신 분</li>
+    </ul>
+  </section>
+
+  <!-- ================================
+       상담 신청 폼 영역
+  ================================ -->
+  <section class="form-section js-ani" id="contact">
+    <h2 class="section-title black">상담신청</h2>
+    <p class="form-desc">간단히 남겨주시면 빠르게 안내드립니다!</p>
+
+    <form class="form-box" id="leadForm">
+      <div class="form-row">
+        <label for="name">이름</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+      <div class="form-row">
+        <label for="phone">연락처</label>
+        <input type="tel" id="phone" name="phone" required />
+      </div>
+      <div class="form-row">
+        <label for="type">관심평형</label>
+        <input type="text" id="type" name="type" />
+      </div>
+
+      <div class="notice">
+        1. 본 서비스는 상담예약 및 분양 정보 안내를 위해 개인정보를 수집합니다.<br>
+        2. 수집항목: 이름, 연락처, 관심평형 등 상담에 필요한 정보<br>
+        3. 수집목적: 분양 상담, 잔여세대 확인, 방문예약 안내<br>
+        4. 보유기간: 상담 종료 또는 삭제 요청 시까지<br>
+        5. 개인정보 제공에 동의하지 않을 수 있으나 상담 안내가 제한될 수 있습니다.
+      </div>
+
+      <label class="agree">
+        <input type="checkbox" required /> 개인정보 수집 및 이용에 동의합니다.
+      </label>
+
+      <button type="submit" class="submit-btn">상담 신청하기</button>
+    </form>
+  </section>
+
+  <!-- ================================
+       푸터
+  ================================ -->
+  <footer class="footer">
+    문의하기&nbsp; <strong>1600-6123</strong>
+    <p>© 2026 현대브레인시티비스타동원. All rights reserved.</p>
+  </footer>
+</div>
+
+<!-- ================================
+     계속 따라다니는 CTA 버튼
+================================ -->
+<button class="sticky-cta pulse" id="stickyCta">잔여세대 확인하기 &gt;&gt;</button>
+
+<!-- ================================
+     우측 TOP / BOTTOM 버튼
+================================ -->
+<div class="quick-nav">
+  <button type="button" id="goTop">↑</button>
+  <button type="button" id="goBottom">↓</button>
+</div>
+
+<script>
+/* ================================
+   HERO 순차 등장 애니메이션
+================================ */
+window.addEventListener('load', function(){
+  const heroItems = document.querySelectorAll('.hero .js-ani');
+  heroItems.forEach(function(el, i){
+    setTimeout(function(){ el.classList.add('on'); }, 180 + (i * 170));
+  });
+});
+
+/* ================================
+   스크롤 시 섹션 하나씩 등장
+================================ */
+const observer = new IntersectionObserver(function(entries){
+  entries.forEach(function(entry){
+    if(entry.isIntersecting){
+      entry.target.classList.add('on');
+      const children = entry.target.querySelectorAll('.js-ani');
+      children.forEach(function(child, i){
+        setTimeout(function(){ child.classList.add('on'); }, i * 120);
+      });
+    }
+  });
+},{threshold:0.12});
+
+document.querySelectorAll('.section.js-ani, .form-section.js-ani').forEach(function(el){
+  observer.observe(el);
+});
+
+/* ================================
+   CTA 클릭 시 상담폼으로 이동
+================================ */
+document.getElementById('stickyCta').addEventListener('click', function(){
+  document.getElementById('contact').scrollIntoView({behavior:'smooth'});
+});
+
+/* ================================
+   TOP / BOTTOM 버튼
+================================ */
+document.getElementById('goTop').addEventListener('click', function(){
+  window.scrollTo({top:0, behavior:'smooth'});
+});
+
+document.getElementById('goBottom').addEventListener('click', function(){
+  document.getElementById('contact').scrollIntoView({behavior:'smooth'});
+});
+
+/* ================================
+   상담폼 제출 처리
+   실제 구글시트/폼스프리 연결 시 아래 fetch URL만 교체하세요.
+================================ */
+document.getElementById('leadForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  alert('상담 신청이 완료되었습니다. 빠르게 안내드리겠습니다.');
+  this.reset();
+});
+</script>
+</body>
+</html>
