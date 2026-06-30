@@ -148,6 +148,49 @@
         </section>
 
 
+        <section id="section2" class="visit-form">
+            <div class="form-title">
+                <h2>무료상담신청</h2>
+                <p>간단히 남겨주시면 빠르게 안내드립니다!</p>
+            </div>
+
+            <!-- 방문예약 제출폼 -->
+            <form id="reserveForm">
+                <input type="hidden" name="project" value="시흥호반써밋_황춘금실장">
+                <div class="form-group">
+                    <label for="nameTop">예약자 성함</label>
+                    <input type="text" name="name" id="nameTop" placeholder="성함을 입력해주세요." required>
+                </div>
+                <div class="form-group">
+                    <label for="phoneTop">연락처</label>
+                    <input type="tel" class="phone-input" id="phoneTop" name="phone" placeholder="전화번호를 입력해주세요." pattern="010-[0-9]{4}-[0-9]{4}" maxlength="13" required>
+                </div>
+                <div class="form-group">
+                    <label for="consult">빠른상담</label>
+                    <select name="consultDetail" id="consult">
+                        <option value="모델하우스 위치 문의">모델하우스 위치 문의</option>
+                        <option value="혜택 바로 확인">혜택 바로 확인</option>
+                        <option value="바로 전화 상담">바로 전화 상담</option>
+                    </select>
+                </div>
+
+                <!-- 이용약관 영역 -->
+                <div class="privary-group">
+                    <label class="privacy-agree">
+                        <input type="checkbox" name="agree" id="agree" required>
+                        개인정보 수집 및 이용에 동의합니다.
+                    </label>
+                
+                    <button type="button" class="privacy-open" id="privacyOpen">
+                        자세히보기
+                    </button>
+                </div>
+
+                <!-- 제출하기 버튼 -->
+                <button type="submit" class="submitBtn">무료상담신청</button>
+            </form>
+        </section>
+
   <!-- 디테일 내용 -->
   <section id="section3" class="details">
         <h2 class="hidden">시흥거모 호반써밋</h2>
@@ -158,65 +201,65 @@
 
   <!-- 방문예약 영역 -->
         <section id="section5" class="visit-form">
-        <div class="form-title">
-            <h2>무료상담신청</h2>
-            <p>간단히 남겨주시면 빠르게 안내드립니다!</p>
-        </div>
-
-        <!-- 방문예약 제출폼 -->
-        <form id="reserveForm">
-            <input type="hidden" name="project" value="시흥호반써밋_황춘금실장">
-            <div class="form-group">
-                <label for="nameTop">예약자 성함</label>
-                <input type="text" name="name" id="nameTop" placeholder="성함을 입력해주세요." required>
-            </div>
-            <div class="form-group">
-                <label for="phoneTop">연락처</label>
-                <input type="tel" class="phone-input" id="phoneTop" name="phone" placeholder="전화번호를 입력해주세요." pattern="010-[0-9]{4}-[0-9]{4}" maxlength="13" required>
-            </div>
-            <div class="form-group">
-                <label for="timeTop">빠른상담</label>
-                <select name="visitTime" id="timeTop">
-                    <option value="모델하우스 위치 문의">모델하우스 위치 문의</option>
-                    <option value="혜택 바로 확인">혜택 바로 확인</option>
-                    <option value="바로 전화 상담">바로 전화 상담</option>
-                </select>
+            <div class="form-title">
+                <h2>무료상담신청</h2>
+                <p>간단히 남겨주시면 빠르게 안내드립니다!</p>
             </div>
 
-            <!-- 이용약관 영역 -->
-            <div class="privary-group">
-                <label class="privacy-agree">
-                    <input type="checkbox" name="agree" id="agree" required>
-                    개인정보 수집 및 이용에 동의합니다.
-                </label>
-            
-                <button type="button" class="privacy-open" id="privacyOpen">
-                    자세히보기
-                </button>
-            </div>
+            <!-- 방문예약 제출폼 -->
+            <form id="reserveForm">
+                <input type="hidden" name="project" value="시흥호반써밋_황춘금실장">
+                <div class="form-group">
+                    <label for="nameTop">예약자 성함</label>
+                    <input type="text" name="name" id="nameTop" placeholder="성함을 입력해주세요." required>
+                </div>
+                <div class="form-group">
+                    <label for="phoneTop">연락처</label>
+                    <input type="tel" class="phone-input" id="phoneTop" name="phone" placeholder="전화번호를 입력해주세요." pattern="010-[0-9]{4}-[0-9]{4}" maxlength="13" required>
+                </div>
+                <div class="form-group">
+                    <label for="consult">빠른상담</label>
+                    <select name="consultDetail" id="consult">
+                        <option value="모델하우스 위치 문의">모델하우스 위치 문의</option>
+                        <option value="혜택 바로 확인">혜택 바로 확인</option>
+                        <option value="바로 전화 상담">바로 전화 상담</option>
+                    </select>
+                </div>
 
-            <!-- 제출하기 버튼 -->
-            <button type="submit" class="submitBtn">무료상담신청</button>
-        </form>
+                <!-- 이용약관 영역 -->
+                <div class="privary-group">
+                    <label class="privacy-agree">
+                        <input type="checkbox" name="agree" id="agree" required>
+                        개인정보 수집 및 이용에 동의합니다.
+                    </label>
+                
+                    <button type="button" class="privacy-open" id="privacyOpen">
+                        자세히보기
+                    </button>
+                </div>
+
+                <!-- 제출하기 버튼 -->
+                <button type="submit" class="submitBtn">무료상담신청</button>
+            </form>
         </section>
 
   <!-- ================================
        푸터
   ================================ -->
-  <footer>
-        <div class="footer-box">
-            <div class="logo-box"><img src="./images/logo-white.png" alt="시흥거모 호반써밋 로고"></div>
-            <div class="ad-box">
-                <p class="ad-name">회사명 : <span>애드프로컴퍼니</span></p>
-                <p class="ad-ceo">대표자명 : <span>이길우</span></p>
-                <p class="ad-address">주소 : <span>경기도 오산시 수목원로 88번길 35, 오산현대테라타워 A동 914호</span></p>
-                <p class="ad-call">전화번호 : <span>010-5565-2854</span></p>
-                <p class="ad-numb">사업자 번호 : <span>258-32-01685</span></p>
-            </div>
-            <p class="footer-call"><a href="tel:010-8076-0116"><img src="./images/call.svg" alt="문의하기 아이콘"></a> <span>문의하기</span></p>
-            <p>© 2026 시흥거모호반써밋. All rights reserved.</p>
-        </div>
-   </footer>
+        <footer>
+             <div class="footer-box">
+                 <div class="logo-box"><img src="./images/logo-white.png" alt="시흥거모 호반써밋 로고"></div>
+                 <div class="ad-box">
+                     <p class="ad-name">회사명 : <span>애드프로컴퍼니</span></p>
+                     <p class="ad-ceo">대표자명 : <span>이길우</span></p>
+                     <p class="ad-address">주소 : <span>경기도 오산시 수목원로 88번길 35, 오산현대테라타워 A동 914호</span></p>
+                     <p class="ad-call">전화번호 : <span>010-5565-2854</span></p>
+                     <p class="ad-numb">사업자 번호 : <span>258-32-01685</span></p>
+                 </div>
+                 <p class="footer-call"><a href="tel:010-8076-0116"><img src="./images/call.svg" alt="문의하기 아이콘"></a> <span>문의하기</span></p>
+                 <p>© 2026 시흥거모호반써밋. All rights reserved.</p>
+             </div>
+        </footer>
 </div>
 
 <!-- 계속 따라다니는 CTA 버튼 -->
