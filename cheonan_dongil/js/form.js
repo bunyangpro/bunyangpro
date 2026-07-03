@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       e.preventDefault();
 
-      const scriptURL = "https://script.google.com/macros/s/AKfycbwr4nVmkYhXQcPbbnNZ1QoEt4XlT5dOtdJxKQ6FV041k-D4u8Z_2X5BKLEOgm-5G0BY/exec";
+      const scriptURL = "https://script.google.com/macros/s/AKfycbzKtK2gcnoDu6XAhbRWG1Q69Vaof-bqeT-Be0pMU1hu95LnF-VcXTBCo6qdLvdis4g/exec";
 
       const formData = new FormData(form);
 
