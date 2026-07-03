@@ -21,15 +21,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     // 개인정보 팝업
-    const privacyOpen = document.querySelector("#privacyOpen");
+    const privacyOpen = document.querySelectorAll(".privacy-open");
     const privacyClose = document.querySelector("#privacyClose");
     const privacyModal = document.querySelector("#privacyModal");
 
-    if (privacyOpen) {
-        privacyOpen.addEventListener("click", function () {
-            privacyModal.classList.add("active");
+    privacyOpen.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+        privacyModal.classList.add("active");
         });
-    }
+    });
 
     if (privacyClose) {
         privacyClose.addEventListener("click", function () {
