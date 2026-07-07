@@ -172,7 +172,7 @@ a {
 
 .main-txt h2 {
   margin-top: 6px;
-  font-size: 42px;
+  font-size: 38px;
   line-height: 1.1;
   font-weight: 900;
   color: #ffd447;
@@ -322,7 +322,7 @@ section {
 
 .sec-sub-title{
   font-size: 16px;
-  color: #921843;
+  color: #193161;
   margin-bottom: 5px;
 }
 
@@ -404,7 +404,7 @@ section {
   width: 100%;
   height: 44px;
   border: 0;
-  background: #921843;
+  background: #193161;
   color: #fff;
   font-size: 14px;
   font-weight: 800;
@@ -430,7 +430,7 @@ section {
 
 /* tab */
 .type-section {
-  padding: 60px 18px;
+  padding: 60px 20px;
   background: #fff;
   text-align: center;
 }
@@ -443,13 +443,15 @@ section {
 
 .tab-menu {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 8px;
-  margin-bottom: 24px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  gap: 10px;
+  margin-bottom: 18px;
 }
 
 .tab-btn {
+  flex: 0 0 85px;
+  min-width: 70px;
   padding: 10px 0;
   border: 1px solid #ddd;
   border-radius: 15px;
@@ -490,6 +492,17 @@ section {
 .tab-content img {
   width: 100%;
   display: block;
+}
+
+.type-scroll {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.type-scroll p {
+  margin: 0 10px;
+  font-size: 14px;
 }
 
 
@@ -589,7 +602,7 @@ footer .ad-box .ad-address span {
 
   border: none;
   border-radius: 50%;
-  background: #921843;
+  background: #193161;
   backdrop-filter: blur(4px);
 
   color: #fff;
