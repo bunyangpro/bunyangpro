@@ -322,7 +322,7 @@ section {
 
 .sec-sub-title{
   font-size: 16px;
-  color: #193161;
+  color: #F17E13;
   margin-bottom: 5px;
 }
 
@@ -404,7 +404,7 @@ section {
   width: 100%;
   height: 44px;
   border: 0;
-  background: #193161;
+  background: #F17E13;
   color: #fff;
   font-size: 14px;
   font-weight: 800;
@@ -602,7 +602,7 @@ footer .ad-box .ad-address span {
 
   border: none;
   border-radius: 50%;
-  background: #193161;
+  background: #F17E13;
   backdrop-filter: blur(4px);
 
   color: #fff;
