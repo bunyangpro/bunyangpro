@@ -290,46 +290,6 @@ a {
   border-color: #222;
 }
 
-.phone-fields {
-  display: grid;
-  grid-template-columns: 0.9fr 1fr 1fr;
-  gap: 7px;
-  min-width: 0;
-}
-
-.privacy-check {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  margin: 3px 0;
-  font-size: 13px;
-  font-weight: 700;
-}
-
-.privacy-check input {
-  width: 16px;
-  height: 16px;
-  accent-color: #1677ff;
-}
-
-.submit-button {
-  width: min(100%, 400px);
-  min-height: 52px;
-  margin: 4px auto 0;
-  border: 0;
-  background: #050505;
-  color: #f1f31a;
-  font-size: clamp(18px, 5.8vw, 25px);
-  font-weight: 900;
-  letter-spacing: -0.045em;
-  cursor: pointer;
-}
-
-.submit-button:disabled {
-  opacity: 0.6;
-  cursor: wait;
-}
 
 .form-message {
   min-height: 18px;
@@ -484,13 +444,61 @@ a {
   color: #666;
 }
 
-.privacy-agree {
-  display: flex;
-  gap: 6px;
-  align-items: center;
-  margin: 10px 0 16px;
-  font-size: 11px;
-  color: #555;
+.privacy-agree{
+
+    display:flex;
+    align-items:center;
+    gap:6px;
+    flex: none;
+    margin:0;
+
+    white-space:nowrap;
+}
+
+.privacy-open{
+
+    border:none;
+    background:none;
+
+    padding:0;
+    margin-left:6px;
+
+    color:#bdbdbd;
+    font-size:12px;
+
+    text-decoration:underline;
+
+    cursor:pointer;
+
+}
+
+.privacy-open:hover{
+
+    color:#8f8f8f;
+
+}
+
+.privacy-group{
+
+    display:flex;
+    align-items:center;
+    margin-bottom: 20px;
+    gap:6px;
+}
+
+/* 제출 cta btn */
+.submitBtn{
+    width:100%;
+    border:0;
+    padding:0;
+    background:none;
+    cursor:pointer;
+}
+
+.submitBtn img{
+    display:block;
+    width:100%;
+    height:auto;
 }
 
 /* PC에서는 모바일 화면만 가운데 표시 */
@@ -503,6 +511,7 @@ a {
   }
 }
 
+/* 팝업 */
 .popup-overlay{
 
     position:fixed;
@@ -512,12 +521,12 @@ a {
     justify-content:center;
     align-items:center;
 
-    background:rgba(0,0,0,.6);
+    background:transparent;   /* 검은 배경 제거 */
 
     opacity:0;
     visibility:hidden;
 
-    transition:.3s;
+    transition:.2s;
 
     z-index:9999;
 
@@ -527,5 +536,41 @@ a {
 
     opacity:1;
     visibility:visible;
+
+}
+
+.popup{
+
+    position:relative;
+
+    width:calc(100% - 32px);
+    max-width:390px;
+
+    max-height:70vh;   /* ← 높이 조절 */
+
+    background:#fff;
+
+    border-radius:14px;
+
+    box-shadow:0 8px 30px rgba(0,0,0,.18);
+
+    padding:24px 20px;
+
+    overflow-y:auto;
+
+}
+
+/* 팝업 x버튼 */
+.popup-close{
+
+    position:absolute;
+    top:14px;
+    right:16px;
+
+    border:none;
+    background:none;
+
+    font-size:26px;
+    cursor:pointer;
 
 }
