@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       e.preventDefault();
 
-      const scriptURL = "https://script.google.com/macros/s/AKfycbzA1JLi3CIeljG6esx5TWS0RmiYWlsJK51h0voFh5O85djQGhPoxhJjubxt3fqva4vW/exec";
+      const scriptURL = "https://script.google.com/macros/s/AKfycbyy0KrSj3xB1SMM44mS5IH5MgGnnC5lhLEgLeI9B8nDKsdwn4TrYWN75pEijDu96l_7/exec";
 
       const formData = new FormData(form);
 
