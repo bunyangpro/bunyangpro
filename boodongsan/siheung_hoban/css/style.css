@@ -132,7 +132,7 @@ a {
 .article-summary {
   margin-top: 12px;
   margin-bottom: 16px;
-  font-size: 13px;
+  font-size: 18px;
   font-weight: 600;
   line-height: 1.65;
 }
@@ -151,8 +151,12 @@ a {
   margin: 0 0 16px;
 }
 
+.article-body .black {
+  color: black;
+}
+
 .article-body strong {
-  color: #e4153b;
+  color: #bf0303;
   font-weight: 800;
 }
 
@@ -188,41 +192,6 @@ a {
   font-size: 13px;
   line-height: 1.55;
 }
-
-.point-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 8px;
-  margin: 20px clamp(16px, 5vw, 24px);
-}
-
-.point-card {
-  padding: 7px 7px 14px;
-  color: #fff;
-  text-align: center;
-}
-
-.point-card img {
-  aspect-ratio: 1.5 / 1;
-  object-fit: cover;
-  border: 2px solid #fff;
-}
-
-.point-card h2 {
-  margin: 9px 0 4px;
-  font-size: 15px;
-}
-
-.point-card p {
-  margin: 0;
-  font-size: 10px;
-  line-height: 1.45;
-}
-
-.point-card--blue { background: #1763bf; }
-.point-card--cyan { background: #0796ae; }
-.point-card--purple { background: #6643c9; }
-.point-card--orange { background: #e7a51f; }
 
 .promo-image {
   margin-top: 24px;
