@@ -21,7 +21,7 @@ html {
 
 body {
   margin: 0;
-  background: #eef0f2;
+  background: #fff;
   color: var(--text);
   font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
     "Noto Sans KR", "Malgun Gothic", sans-serif;
@@ -56,7 +56,6 @@ a {
   min-height: 100vh;
   margin: 0 auto;
   background: #fff;
-  box-shadow: 0 0 24px rgb(0 0 0 / 8%);
   overflow: hidden;
 }
 
@@ -85,6 +84,13 @@ a {
 .consult-section {
   margin-right: clamp(16px, 5vw, 24px);
   margin-left: clamp(16px, 5vw, 24px);
+}
+
+.ad {
+  font-weight: 800;
+  font-size: 16px;
+  color: #bf0303;
+  margin: 10px 0 0 22px;
 }
 
 .article-meta {
@@ -546,4 +552,30 @@ a {
     font-size:26px;
     cursor:pointer;
 
+}
+
+/* 푸터 */
+footer {
+  padding: 20px 0 56px;
+  background: #26221f;
+  color: #fff;
+  text-align: center;
+}
+
+footer p {
+  margin-bottom: 8px;
+}
+
+footer p a {
+  display: inline-block;
+  font-size: 18px;
+  margin-left: 3px;
+}
+footer .ad-box {
+  margin-bottom: 20px;
+  font-size: 13px;
+} 
+
+footer .ad-box .ad-address span {
+  line-height: 1.4;
 }
