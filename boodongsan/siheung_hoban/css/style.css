@@ -556,28 +556,6 @@ a {
 
 }
 
-/* 푸터 */
-footer {
-  padding: 20px 0 56px;
-  background: #26221f;
-  color: #fff;
-  text-align: center;
-}
-
-footer p {
-  margin-bottom: 8px;
-}
-
-footer p a {
-  display: inline-block;
-  font-size: 18px;
-  margin-left: 3px;
-}
-footer .ad-box {
-  margin-bottom: 20px;
-  font-size: 13px;
-} 
-
-footer .ad-box .ad-address span {
-  line-height: 1.4;
+#form2 {
+  padding-bottom: 80px;
 }
