@@ -45,50 +45,122 @@ a {
   }
 }
 
-/* 이벤트 배너 팝업 */
-/* event popup */
+/* =========================
+   이벤트 팝업
+========================= */
+
 .event-popup {
   position: fixed;
   inset: 0;
-  z-index: 10000;
-  background: rgba(0,0,0,.65);
+
+  z-index: 99999;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 24px;
+
+  padding: 20px;
+
+  background: rgba(0, 0, 0, 0.58);
 }
+
 
 .event-popup.hide {
   display: none;
 }
 
+
+/* 팝업 박스 */
 .event-popup-box {
   position: relative;
+
   width: 100%;
   max-width: 430px;
-  border-radius: 14px;
+
+  max-height: 92vh;
+
+  border-radius: 18px;
   overflow: hidden;
+
   background: #fff;
+
+  box-shadow:
+    0 15px 45px rgba(0, 0, 0, 0.3);
 }
 
+
+/* 팝업 이미지 */
 .event-popup-box img {
   display: block;
+
   width: 100%;
+  height: auto;
+
+  max-height: 92vh;
+
+  object-fit: contain;
 }
 
+
+/* X 버튼 */
 .event-close {
   position: absolute;
-  right: 10px;
+
   top: 10px;
-  width: 32px;
-  height: 32px;
+  right: 10px;
+
+  z-index: 5;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 38px;
+  height: 38px;
+
+  padding: 0;
+
   border: 0;
   border-radius: 50%;
-  background: rgba(0,0,0,.65);
+
+  background: rgba(0, 0, 0, 0.72);
   color: #fff;
-  font-size: 22px;
+
+  font-size: 27px;
+  font-weight: 300;
+  line-height: 1;
+
   cursor: pointer;
-  z-index: 2;
+}
+
+
+/* 모바일 */
+@media (max-width: 480px) {
+
+  .event-popup {
+    padding: 12px;
+  }
+
+  .event-popup-box {
+    max-width: 390px;
+    max-height: 90vh;
+
+    border-radius: 14px;
+  }
+
+  .event-popup-box img {
+    max-height: 90vh;
+  }
+
+  .event-close {
+    top: 8px;
+    right: 8px;
+
+    width: 34px;
+    height: 34px;
+
+    font-size: 24px;
+  }
 }
 
 /* 헤더 */
