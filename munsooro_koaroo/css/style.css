@@ -2005,34 +2005,141 @@ html.reveal-ready
   transition-delay: 0.32s;
 }
 
-/* 방문예약 입력칸 전체 크기 통일 */
-.visit-form .form-group input:not([type="checkbox"]),
-.visit-form .form-group select {
+/* ========================================
+   모바일 예약폼 입력칸 통일
+======================================== */
+
+.visit-form {
+    width: 100%;
+}
+
+.visit-form form,
+.visit-form .form-group {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.visit-form .form-group {
+    overflow: visible;
+}
+
+/* 일반 input + 날짜 + select 공통 */
+.visit-form .form-group > input:not([type="checkbox"]):not([type="radio"]),
+.visit-form .form-group > select {
     display: block;
     width: 100%;
     min-width: 0;
     max-width: 100%;
     height: 58px;
+    min-height: 58px;
+
     margin: 0;
     padding: 0 18px;
-    box-sizing: border-box;
+
     border: 1px solid #d9dde1;
     border-radius: 8px;
+    outline: none;
+
     background-color: #fff;
+    color: #252a2e;
+
     font-family: inherit;
     font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+
+    box-sizing: border-box;
+    box-shadow: none;
 }
 
-/* 아이폰 방문 희망일 크기 오류 방지 */
-.visit-form input[type="date"] {
+/* 아이폰·안드로이드 날짜 입력칸 보정 */
+.visit-form .form-group > input[type="date"] {
     width: 100%;
     min-width: 0;
     max-width: 100%;
     height: 58px;
+    min-height: 58px;
+
     padding: 0 18px;
-    box-sizing: border-box;
+
+    color: #252a2e;
+    background-color: #fff;
+
+    font-family: inherit;
+    font-size: 16px;
     line-height: normal;
-    text-align: left;
+
+    box-sizing: border-box;
+
+    /* 달력 기능은 유지하면서 브라우저 기본 여백만 보정 */
     -webkit-appearance: none;
     appearance: none;
+}
+
+/* iPhone Safari 날짜 글씨 정렬 */
+.visit-form input[type="date"]::-webkit-date-and-time-value {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    min-height: 56px;
+
+    margin: 0;
+    padding: 0;
+
+    text-align: left;
+}
+
+/* 안드로이드·크롬 날짜 내부 여백 보정 */
+.visit-form input[type="date"]::-webkit-datetime-edit {
+    display: flex;
+    align-items: center;
+
+    min-height: 56px;
+    padding: 0;
+}
+
+/* 날짜 각 항목의 브라우저 기본 여백 제거 */
+.visit-form input[type="date"]::-webkit-datetime-edit-fields-wrapper {
+    padding: 0;
+}
+
+/* 날짜 선택 달력 버튼 */
+.visit-form input[type="date"]::-webkit-calendar-picker-indicator {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+
+    cursor: pointer;
+    opacity: 0.65;
+}
+
+/* select도 input과 동일한 높이 유지 */
+.visit-form .form-group > select {
+    padding-right: 45px;
+    cursor: pointer;
+}
+
+/* 포커스 상태 */
+.visit-form .form-group > input:not([type="checkbox"]):focus,
+.visit-form .form-group > select:focus {
+    border-color: #b88a42;
+}
+
+/* 모바일 브라우저 확대 및 크기 변형 방지 */
+@media screen and (max-width: 768px) {
+    .visit-form .form-group > input:not([type="checkbox"]):not([type="radio"]),
+    .visit-form .form-group > select {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+
+        height: 58px !important;
+        min-height: 58px !important;
+
+        font-size: 16px !important;
+        box-sizing: border-box !important;
+    }
 }
