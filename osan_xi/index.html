@@ -33,6 +33,7 @@
     <script src="./js/form.js" defer></script>
     <script src="./js/tab.js" defer></script>
     <script src="./js/popup.js" defer></script>
+    <script src="./js/scroll.js" defer></script>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-6YBPQFFFKG"></script>
@@ -46,6 +47,13 @@
 </head>
 <body>
 
+    <!-- 하단 고정 CTA -->
+    <div class="fixed-cta">
+        <a href="#section5" class="fixed-cta-btn">
+            방문예약 신청하기
+        </a>
+    </div>
+
     
 
     <!-- 전체 랜딩 wrap -->
@@ -58,14 +66,14 @@
                  <h1 class="logo">
                     <a href="#section1">
                          <!-- 로고  -->
-                         <img src="./images/logo-white.svg" alt="오산 헤리티지자이 로고" class="header-logo">
+                         <img src="./images/logo-white.svg" alt="오산 헤리티지 자이 로고" class="header-logo">
                     </a>
                  </h1>
 
                 <!-- 전화번호 -->
                 <div class="header-phone shake">
-                    <a href="tel:1661-7565" class="header-tel">
-                        <span><img src="./images/call.svg" alt="오산 헤리티지 자이 예약상담 전화번호"></span>
+                    <a href="tel:1555-5687" class="header-tel">
+                        <span><img src="./images/call.svg" alt="오산 헤리티지 자이 로고 예약상담 전화번호"></span>
                     </a>
                 </div>
             </div>
@@ -73,42 +81,35 @@
 
         <!-- 섹션1 - 메인영역 -->
             <section id="section1" class="main-section">
-                <!-- 배경 비디오 영역 -->
-               <video class="main-bg" autoplay muted loop playsinline>
-                <source src="./images/hero-sky.mp4" type="video/mp4">
-               </video>
                <div class="main-txt js-ani">
                <!-- 메인 타이틀 영역 -->
-                   <p class="sub-title">비규제 지역 프리미엄 기대!</p>
+                   <p class="sub-title">전세로 살아보고 내 집 결정!</p>
                    <h2>오산 헤리티지 자이</h2>
-                   <p>트리플 생활권 입지! 선착순 분양중!</p>
+                   <p>선호도 높은 84 단일 평형! 5억대 입주 가능</p>
                </div>
                <!-- 혜택 문구 영역 -->
                 <div class="main-benefits">
                     <!-- 정보 카드 3개 -->
                     <div class="info-grid">
                         <div class="info-card js-ani">
-                          <div class="info-icon"><img src="./images/hero-money.svg" alt="계약금 10%"></div>
-                          <div class="info-title">계약금</div>
-                          <div class="info-main">10%</div>
-                        </div>
-                        <div class="info-card js-ani">
-                          <div class="info-icon"><img src="./images/hero-apartment.svg" alt="총 1783세대"></div>
-                          <div class="info-title">총</div>
-                          <div class="info-main">1783세대</div>
-                        </div>
-                        <div class="info-card js-ani">
-                          <div class="info-icon"><img src="./images/hero-won.svg" alt="1차 계약금 1천만 원"></div>
                           <div class="info-title">1차 계약금</div>
-                          <div class="info-main">1천만 원</div>
+                          <div class="info-main">500만 원</div>
+                        </div>
+                        <div class="info-card js-ani">
+                          <div class="info-title">중도금 전액</div>
+                          <div class="info-main">무이자</div>
+                        </div>
+                        <div class="info-card js-ani">
+                          <div class="info-title">선택 계약</div>
+                          <div class="info-main">전세•분양</div>
                         </div>
                     </div>
                     <div class="infra-grid js-ani">
                         <div class="infra-card">
-                            <p><span class="infra-icon"><img src="./images/hero-edu.svg" alt="초•중 도보권 통학, 학원가 인접"></span>초•중 도보권 통학, 학원가 인접</p>
+                            <p>신정초 도보 5분 · 문수로 학세권</p>
                         </div>
                         <div class="infra-card">
-                            <p><span class="infra-icon"><img src="./images/hero-traffic.svg" alt="병점역 도보권, GTX-C 연장 계획"></span>병점역 도보권, GTX-C 연장 계획</p>
+                            <p>한국토지신탁 보장•안전한 전세 선택 가능</p>
                         </div>
                     </div>
                 </div>
@@ -122,7 +123,7 @@
                 </div>
                <!-- 하단 아파트 이미지 -->
                <div class="bottom-img">
-                   <img src="./images/main-1.png" alt="오산 헤리티지 자이">
+                   <img src="./images/main-1.jpg" alt="울산 문수로 코아루 에듀 스카이">
                </div>
                <!-- 그라디언트 -->
                <div class="main-gradient"></div>
@@ -132,7 +133,7 @@
         <section id="section2" class="visit-form">
            <div class="form-title">
                <h2>
-                   <p class="sec-sub-title">오산 헤리티지 자이</p>
+                   <p class="sec-sub-title">울산 문수로 코아루 에듀 스카이</p>
                    방문예약
                </h2>
                <hr>
@@ -194,23 +195,406 @@
            </form>
         </section>
 
-        <section id="section3" class="details">
-            <h2 class="hidden">오산 헤리티지 자이</h2>
-            <div class="details-img">
-                <img src="./images/section-1.png" alt="오산 헤리티지 자이 프리미엄 소개">
-            </div>
-            <div class="details-img">
-                <img src="./images/section-2.png" alt="오산 헤리티지 자이 프리미엄 소개">
-            </div>
+        <!-- 프리미엄 소개 영역 -->
+        <section id="section3" class="premium-list">
+
+            <!-- 프로젝트 인트로 -->
+            <article class="project-intro js-premium-reveal">
+            
+                <!-- 로고 -->
+                <div class="project-intro-logo">
+                    <img
+                        src="./images/logo-color.svg"
+                        alt="KOAROO"
+                    >
+                </div>
+            
+                <!-- 현장명 -->
+                <h2 class="project-intro-title">
+                    울산 문수로 코아루<br>
+                    에듀 스카이
+                </h2>
+            
+                <!-- 아파트 이미지 -->
+                <div class="project-intro-image">
+                    <img
+                        src="./images/apartment.jpg"
+                        alt="울산 문수로 코아루 에듀 스카이"
+                    >
+                </div>
+            
+                <!-- 기본정보 -->
+                <div class="project-intro-info">
+                    <p class="project-intro-location">
+                        울산 남구 신정동<br>
+                        지상 38층, 전용 84㎡ 주거복합!
+                    </p>
+                
+                    <p class="project-intro-benefit">
+                        <strong>1차 계약금 단 500만 원!</strong><br>
+                        전세·분양 선택 계약<br>
+                        신정초 도보 5분, 옥동 학원가까지!
+                    </p>
+                </div>
+            
+                <!-- 다음 섹션 안내 화살표 -->
+                <a
+                    href="#educationPremium"
+                    class="project-scroll-down"
+                    aria-label="다음 섹션으로 이동"
+                >
+                    <span></span>
+                    <span></span>
+                </a>
+            
+            </article>
+        
+            <!-- 교육·생활 -->
+            <article class="premium-section js-premium-reveal">
+            
+                <div class="premium-title">
+                    <p>EDUCATION PREMIUM</p>
+                    <span></span>
+                
+                    <h2>
+                        문수로 중심에서 누리는<br>
+                        <strong>교육·생활 프리미엄</strong>
+                    </h2>
+                </div>
+            
+                <div class="premium-visual">
+                    <img
+                        class="premium-main-img"
+                        src="./images/location-map.jpg"
+                        alt="교육 및 생활 인프라"
+                    >
+                
+                    <div class="premium-cards premium-cards--2">
+                    
+                        <!-- 밝은 카드 -->
+                        <div class="premium-card premium-card--light">
+                            <div class="premium-card-content">
+                                <small>EDUCATION</small>
+                                <strong>신정초 도보 5분</strong>
+                                <p>옥동 학원가·학교 인접</p>
+                            </div>
+                        
+                            <!-- 아이콘 자리 -->
+                            <div class="premium-card-icon">
+                                <img
+                                    src="./images/icon-education.svg"
+                                    alt=""
+                                >
+                            </div>
+                        </div>
+                    
+                        <!-- 어두운 카드 -->
+                        <div class="premium-card premium-card--dark">
+                            <div class="premium-card-content">
+                                <small>LIVING</small>
+                                <strong>편리한 신정 생활권</strong>
+                                <p>시청·롯데마트 생활권</p>
+                            </div>
+                        
+                            <!-- 아이콘 자리 -->
+                            <div class="premium-card-icon">
+                                <img
+                                    src="./images/icon-living.svg"
+                                    alt=""
+                                >
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+            
+                <p class="premium-description">
+                    학교부터 생활 인프라까지 가까운 문수로 중심 입지
+                </p>
+            
+            </article>
+        
+        
+            <!-- 교통 -->
+            <article class="premium-section js-premium-reveal">
+            
+                <div class="premium-title">
+                    <p>TRAFFIC PREMIUM</p>
+                    <span></span>
+                
+                    <h2>
+                        문수로로 빠르게,<br>
+                        <strong>교통 프리미엄</strong>
+                    </h2>
+                </div>
+            
+                <div class="premium-visual">
+                    <img
+                        class="premium-main-img"
+                        src="./images/traffic.jpg"
+                        alt="문수로 및 번영로 교통환경"
+                    >
+                
+                    <div class="premium-cards premium-cards--2">
+                    
+                        <div class="premium-card premium-card--light">
+                            <div class="premium-card-content">
+                                <small>ROAD NETWORK</small>
+                                <strong>문수로·번영로</strong>
+                                <p>주요 도로망으로 빠른 이동</p>
+                            </div>
+                        
+                            <div class="premium-card-icon">
+                                <img
+                                    src="./images/icon-road.svg"
+                                    alt=""
+                                >
+                            </div>
+                        </div>
+                    
+                        <div class="premium-card premium-card--dark">
+                            <div class="premium-card-content">
+                                <small>FUTURE TRANSIT</small>
+                                <strong>울산 트램 1호선</strong>
+                                <p>울산 도시철도 1호선 계획</p>
+                            </div>
+                        
+                            <div class="premium-card-icon">
+                                <img
+                                    src="./images/icon-tram.svg"
+                                    alt=""
+                                >
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+            
+                <p class="premium-description">
+                    문수로와 번영로를 가까이 누리는 편리한 교통환경
+                </p>
+            
+            </article>
+        
+        
+            <!-- 랜드마크 -->
+            <article class="premium-section js-premium-reveal">
+            
+                <div class="premium-title">
+                    <p>LANDMARK PREMIUM</p>
+                    <span></span>
+                
+                    <h2>
+                        문수로 중심에 우뚝 선<br>
+                        <strong>38층 스카이 랜드마크</strong>
+                    </h2>
+                </div>
+            
+                <div class="premium-visual">
+                    <img
+                        class="premium-main-img"
+                        src="./images/landmark.jpg"
+                        alt="문수로 코아루 에듀 스카이"
+                    >
+                
+                    <div class="premium-cards premium-cards--2">
+                    
+                        <!-- 아이콘이 필요 없으면 premium-card-icon 자체를 생략 -->
+                        <div class="premium-card premium-card--light">
+                            <div class="premium-card-content">
+                                <small>UNIT PLAN</small>
+                                <strong>전 세대 84㎡</strong>
+                                <p>선호도 높은 단일 평형</p>
+                            </div>
+                        </div>
+                    
+                        <div class="premium-card premium-card--dark">
+                            <div class="premium-card-content">
+                                <small>PARKING</small>
+                                <strong>세대당 약 1.3대</strong>
+                                <p>100% 지하 자주식 주차</p>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+            
+                <p class="premium-description">
+                    문수로 중심에서 만나는 고층 주거단지
+                </p>
+            
+            </article>
+        
+        
+            <!-- 단지설계 -->
+            <article class="premium-section js-premium-reveal">
+            
+                <div class="premium-title">
+                    <p>COMPLEX PREMIUM</p>
+                    <span></span>
+                
+                    <h2>
+                        쾌적함을 더한<br>
+                        <strong>특화 단지설계</strong>
+                    </h2>
+                </div>
+            
+                <div class="premium-visual">
+                    <img
+                        class="premium-main-img"
+                        src="./images/complex-plan.jpg"
+                        alt="문수로 코아루 단지배치도"
+                    >
+                
+                    <div class="premium-cards premium-cards--2">
+                    
+                        <div class="premium-card premium-card--light">
+                            <div class="premium-card-number">01</div>
+                        
+                            <div class="premium-card-content">
+                                <small>DESIGN</small>
+                                <strong>3면 개방·4Bay</strong>
+                                <p>채광과 공간 활용을 고려한 설계</p>
+                            </div>
+                        </div>
+                    
+                        <div class="premium-card premium-card--dark">
+                            <div class="premium-card-number">02</div>
+                        
+                            <div class="premium-card-content">
+                                <small>GROUND PLAN</small>
+                                <strong>보행 중심의 단지설계</strong>
+                                <p>차량 동선을 분리한 안전한 생활환경</p>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+            
+            </article>
+        
+        
+            <!-- 커뮤니티: 카드 1개형 -->
+            <article class="premium-section js-premium-reveal">
+            
+                <div class="premium-title">
+                    <p>COMMUNITY PREMIUM</p>
+                    <span></span>
+                
+                    <h2>
+                        일상의 편의를 높이는<br>
+                        <strong>커뮤니티 공간</strong>
+                    </h2>
+                </div>
+            
+                <div class="premium-visual">
+                    <img
+                        class="premium-main-img"
+                        src="./images/community.jpg"
+                        alt="피트니스 커뮤니티 연출 이미지"
+                    >
+                
+                    <div class="premium-cards premium-cards--1">
+                    
+                        <div class="premium-card premium-card--light">
+                            <div class="premium-card-content">
+                                <small>COMMUNITY</small>
+                                <strong>피트니스·옥상조경</strong>
+                                <p>일상의 만족을 높이는 커뮤니티</p>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+            
+                <p class="premium-description">
+                    일상의 편리함을 높이는 실속 있는 단지 구성
+                </p>
+            
+                <p class="premium-notice">
+                    ※ 상기 이미지는 소비자의 이해를 돕기 위한 연출 이미지입니다.
+                </p>
+            
+            </article>
+        
+        
+            <!-- 계약조건 -->
+            <article class="premium-section js-premium-reveal">
+            
+                <div class="premium-title">
+                    <p>SPECIAL PREMIUM</p>
+                    <span></span>
+                
+                    <h2>
+                        부담은 낮추고,<br>
+                        <strong>내 집 선택은 여유롭게</strong>
+                    </h2>
+                </div>
+            
+                <div class="premium-visual">
+                    <img
+                        class="premium-main-img"
+                        src="./images/special-condition.jpg"
+                        alt="아파트 내부 연출 이미지"
+                    >
+                
+                    <div class="premium-cards premium-cards--2">
+                    
+                        <div class="premium-card premium-card--light">
+                            <div class="premium-card-content">
+                                <small>RENT OR BUY</small>
+                                <strong>전세로 먼저 살아보고</strong>
+                                <p>분양 여부는 나중에 결정</p>
+                            </div>
+                        </div>
+                    
+                        <div class="premium-card premium-card--dark">
+                            <div class="premium-card-content">
+                                <small>CONTRACT</small>
+                                <strong>1차 계약금 500만 원</strong>
+                                <p>5억대 입주 가능·중도금 전액 무이자</p>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+            
+                <p class="premium-description">
+                    전세·분양 선택 가능 · 한국토지신탁 시행
+                </p>
+            
+                <p class="premium-notice">
+                    ※ 상기 이미지는 소비자의 이해를 돕기 위한 연출 이미지입니다.
+                </p>
+            
+            </article>
+        
         </section>
 
+        
+        <!-- <section id="section3" class="details">
+            <h2 class="hidden">울산 문수로 코아루 에듀 스카이</h2>
+            <div class="details-img">
+                <img src="./images/section-1.png" alt="울산 문수로 코아루 에듀 스카이 프리미엄 소개">
+            </div>
+            <div class="details-img">
+                <img src="./images/section-2.png" alt="울산 문수로 코아루 에듀 스카이 프리미엄 소개">
+            </div>
+        </section> -->
+        
 
         <!-- 평형안내(타입) 영역 -->
         <section class="type-section">
-            <h2>
-                <p class="sec-sub-title">오산 헤리티지 자이</p>
-                평형안내
-            </h2>
+            <!-- 평형안내 제목 -->
+            <div class="type-title">
+                <p class="type-label">UNIT PLAN</p>
+                <span class="type-title-line"></span>
+            
+                <h2>
+                    라이프스타일에 맞춘<br>
+                    <strong>84㎡ 공간 설계</strong>
+                </h2>
+            </div>
 
             <!-- 단지 탭 -->
             <div class="complex-tab">
@@ -315,7 +699,7 @@
         <!-- 사업개요 영역 -->
         <section id="section4" class="summary">
         <h2>
-            <p class="sec-sub-title">오산 헤리티지 자이</p>
+            <p class="sec-sub-title">울산 문수로 코아루 에듀 스카이</p>
             사업개요
         </h2>
         <ul class="summary-list">
@@ -324,7 +708,7 @@
                     <div class="summary-icon"><img src="./images/summary-1.svg" alt="대지위치"></div>
                     <div class="summary-txt">
                         <p class="summary-main-txt">대지위치</p>
-                        <p class="summary-sub-txt">경기도 오산시 양산동 223번지, 328-2번지 일원</p>
+                        <p class="summary-sub-txt">울산광역시 남구 신정동 1335-7번지 외 4필지</p>
                     </div>
                 </div>
             </li>
@@ -333,7 +717,7 @@
                     <div class="summary-icon"><img src="./images/summary-2.svg" alt="대지면적"></div>
                     <div class="summary-txt">
                         <p class="summary-main-txt">대지면적</p>
-                        <p class="summary-sub-txt">55,220㎡(1BL), 36,880㎡(2BL)</p>
+                        <p class="summary-sub-txt">2,322.40 ㎡ (702.53평)</p>
                     </div>
                 </div>
             </li>
@@ -342,7 +726,7 @@
                     <div class="summary-icon"><img src="./images/summary-3.svg" alt="규모"></div>
                     <div class="summary-txt">
                         <p class="summary-main-txt">규모</p>
-                        <p class="summary-sub-txt">1BL - 지하 2층 ~ 27층 13개동, 1,069세대 / 2BL - 지하 2층 ~ 27층 9개동, 714세대</p>
+                        <p class="summary-sub-txt">지하 5층 ~ 지상 38층(아파트) 2개동 / 오피스텔 14층</p>
                     </div>
                 </div>
             </li>
@@ -351,7 +735,7 @@
                     <div class="summary-icon"><img src="./images/summary-4.svg" alt="타입"></div>
                     <div class="summary-txt">
                         <p class="summary-main-txt">타입</p>
-                        <p class="summary-sub-txt">1BL - 75㎡, 84A㎡, 84B㎡, 84C㎡, 84D㎡, 102㎡, 124㎡, 166㎡ / 2BL - 75㎡, 84A㎡, 84B㎡, 84C㎡, 102㎡, 124㎡, 166㎡</p>
+                        <p class="summary-sub-txt">아파트 : 84A㎡, 84B㎡, 84C㎡ / 오피스텔 : 84OT㎡</p>
                     </div>
                 </div>
             </li>
@@ -362,7 +746,7 @@
         <section id="section5" class="visit-form">
         <div class="form-title">
             <h2>
-                <p class="sec-sub-title">오산 헤리티지 자이</p>
+                <p class="sec-sub-title">울산 문수로 코아루 에듀 스카이</p>
                 방문예약
             </h2>
             <hr>
@@ -371,7 +755,7 @@
 
         <!-- 방문예약 제출폼 -->
         <form id="reserveForm">
-            <input type="hidden" name="project" value="오산헤리티지자이_장윤정팀장">
+            <input type="hidden" name="project" value="울산코아루_마현재본부장">
             <div class="form-group">
                 <label for="nameTop">예약자 성함</label>
                 <input type="text" name="name" id="nameTop" placeholder="성함을 입력해주세요." required>
@@ -427,7 +811,7 @@
         <!-- 푸터 -->
         <footer>
           <div class="footer-box">
-              <div class="logo-box"><img src="./images/logo-white.svg" alt="오산 헤리티지 자이 로고"></div>
+              <div class="logo-box"><img src="./images/logo-white.svg" alt="울산 문수로 코아루 에듀 스카이 로고"></div>
               <div class="ad-box">
                 <p class="ad-name">회사명 : <span>애드프로컴퍼니</span></p>
                 <p class="ad-ceo">대표자명 : <span>이길우</span></p>
@@ -435,17 +819,24 @@
                 <p class="ad-call">전화번호 : <span>010-5565-2854</span></p>
                 <p class="ad-numb">사업자 번호 : <span>258-32-01685</span></p>
               </div>
-              <p class="footer-call"><a href="tel:1661-7565"><img src="./images/call.svg" alt="문의하기 아이콘"></a> <span>문의하기</span></p>
-              <p>© 2026 오산헤리티지자이. All rights reserved.</p>
+              <p class="footer-call"><a href="tel:1555-5687"><img src="./images/call.svg" alt="문의하기 아이콘"></a> <span>문의하기</span></p>
+              <p>© 2026 울산문수로코아루에듀스카이. All rights reserved.</p>
           </div>
         </footer>
 
 
         <!-- top/bottom 이동버튼 -->
          <div class="quick-btn">
-            <button type="button" id="toTop" aria-label="맨 위로 이동"><i class="fa-solid fa-arrow-up" style="color: rgb(255, 255, 255);"></i></button>
-            <button type="button" id="toBottom" aria-label="맨 아래로 이동"><i class="fa-solid fa-arrow-down" style="color: rgb(255, 255, 255);"></i></button>
-         </div>
+            <button type="button" id="toTop" aria-label="맨 위로 이동">
+                <i class="fa-solid fa-arrow-up"></i>
+            </button>
+        
+            <button type="button" id="toBottom" aria-label="맨 아래로 이동">
+                <i class="fa-solid fa-arrow-down"></i>
+            </button>
+        </div>
+    
+    </div>
     
 </body>
 </html>
