@@ -33,6 +33,7 @@
     <script src="./js/form.js" defer></script>
     <script src="./js/tab.js" defer></script>
     <script src="./js/popup.js" defer></script>
+    <script src="./js/scroll.js"></script>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-6YBPQFFFKG"></script>
@@ -46,6 +47,13 @@
 </head>
 <body>
 
+    <!-- 하단 고정 CTA -->
+    <div class="fixed-cta">
+        <a href="#section5" class="fixed-cta-btn">
+            방문예약 신청하기
+        </a>
+    </div>
+
     
 
     <!-- 전체 랜딩 wrap -->
@@ -58,14 +66,14 @@
                  <h1 class="logo">
                     <a href="#section1">
                          <!-- 로고  -->
-                         <img src="./images/logo-white.svg" alt="오산 헤리티지자이 로고" class="header-logo">
+                         <img src="./images/logo-white.svg" alt="오산 헤리티지 자이 로고" class="header-logo">
                     </a>
                  </h1>
 
                 <!-- 전화번호 -->
                 <div class="header-phone shake">
                     <a href="tel:1600-2774" class="header-tel">
-                        <span><img src="./images/call.svg" alt="오산 헤리티지 자이 예약상담 전화번호"></span>
+                        <span><img src="./images/call.svg" alt="오산 헤리티지 자이 로고 예약상담 전화번호"></span>
                     </a>
                 </div>
             </div>
@@ -73,42 +81,35 @@
 
         <!-- 섹션1 - 메인영역 -->
             <section id="section1" class="main-section">
-                <!-- 배경 비디오 영역 -->
-               <video class="main-bg" autoplay muted loop playsinline>
-                <source src="./images/hero-sky.mp4" type="video/mp4">
-               </video>
                <div class="main-txt js-ani">
                <!-- 메인 타이틀 영역 -->
-                   <p class="sub-title">비규제 지역 프리미엄 기대!</p>
+                   <p class="sub-title">1차 계약금 500만 원!</p>
                    <h2>오산 헤리티지 자이</h2>
-                   <p>트리플 생활권 입지! 선착순 분양중!</p>
+                   <p>입주시까지 계약금 5% 끝!</p>
                </div>
                <!-- 혜택 문구 영역 -->
                 <div class="main-benefits">
                     <!-- 정보 카드 3개 -->
                     <div class="info-grid">
                         <div class="info-card js-ani">
-                          <div class="info-icon"><img src="./images/hero-money.svg" alt="계약금 10%"></div>
-                          <div class="info-title">계약금</div>
-                          <div class="info-main">10%</div>
-                        </div>
-                        <div class="info-card js-ani">
-                          <div class="info-icon"><img src="./images/hero-apartment.svg" alt="총 1783세대"></div>
-                          <div class="info-title">총</div>
-                          <div class="info-main">1783세대</div>
-                        </div>
-                        <div class="info-card js-ani">
-                          <div class="info-icon"><img src="./images/hero-won.svg" alt="1차 계약금 1천만 원"></div>
                           <div class="info-title">1차 계약금</div>
-                          <div class="info-main">1천만 원</div>
+                          <div class="info-main">500만 원</div>
+                        </div>
+                        <div class="info-card js-ani">
+                          <div class="info-title">1,783세대</div>
+                          <div class="info-main">대단지</div>
+                        </div>
+                        <div class="info-card js-ani">
+                          <div class="info-title">계약금</div>
+                          <div class="info-main">5%</div>
                         </div>
                     </div>
                     <div class="infra-grid js-ani">
                         <div class="infra-card">
-                            <p><span class="infra-icon"><img src="./images/hero-edu.svg" alt="초•중 도보권 통학, 학원가 인접"></span>초•중 도보권 통학, 학원가 인접</p>
+                            <p>초•중 도보권 통학, 인근 학원가</p>
                         </div>
                         <div class="infra-card">
-                            <p><span class="infra-icon"><img src="./images/hero-traffic.svg" alt="병점역 도보권, GTX-C 연장 계획"></span>병점역 도보권, GTX-C 연장 계획</p>
+                            <p>병점역 생활권, GTX-C•1호선 연장 계획</p>
                         </div>
                     </div>
                 </div>
@@ -122,7 +123,7 @@
                 </div>
                <!-- 하단 아파트 이미지 -->
                <div class="bottom-img">
-                   <img src="./images/main-1.png" alt="오산 헤리티지 자이">
+                   <img src="./images/main-1.jpg" alt="오산 헤리티지 자이">
                </div>
                <!-- 그라디언트 -->
                <div class="main-gradient"></div>
@@ -194,23 +195,405 @@
            </form>
         </section>
 
-        <section id="section3" class="details">
-            <h2 class="hidden">오산 헤리티지 자이</h2>
-            <div class="details-img">
-                <img src="./images/section-1.png" alt="오산 헤리티지 자이 프리미엄 소개">
-            </div>
-            <div class="details-img">
-                <img src="./images/section-2.png" alt="오산 헤리티지 자이 프리미엄 소개">
-            </div>
+        <!-- 프리미엄 소개 영역 -->
+        <section id="section3" class="premium-list">
+
+            <!-- 프로젝트 인트로 -->
+            <article class="project-intro js-premium-reveal">
+            
+                <!-- 로고 -->
+                <div class="project-intro-logo">
+                    <img
+                        src="./images/logo-color.svg"
+                        alt="오산 헤리티지 자이 로고"
+                    >
+                </div>
+            
+                <!-- 현장명 -->
+                <h2 class="project-intro-title">
+                    오산 헤리티지 자이
+                </h2>
+            
+                <!-- 아파트 이미지 -->
+                <div class="project-intro-image">
+                    <img
+                        src="./images/apartment.jpg"
+                        alt="오산 헤리티지 자이"
+                    >
+                </div>
+            
+                <!-- 기본정보 -->
+                <div class="project-intro-info">
+                    <p class="project-intro-location">
+                        병점 생활권에서 누리는 <br/>
+                        자이 브랜드 라이프
+                    </p>
+                
+                    <p class="project-intro-benefit">
+                        1BL•2BL 총 <strong>1,783세대</strong><br>
+                        다양한 평형으로 구성된<br/>
+                        대단지 프리미엄!
+                    </p>
+                </div>
+            
+                <!-- 다음 섹션 안내 화살표 -->
+                <a
+                    href="#educationPremium"
+                    class="project-scroll-down"
+                    aria-label="다음 섹션으로 이동"
+                >
+                    <span></span>
+                    <span></span>
+                </a>
+            
+            </article>
+        
+            <!-- 교육·생활 -->
+            <article class="premium-section js-premium-reveal">
+            
+                <div class="premium-title">
+                    <p>EDUCATION PREMIUM</p>
+                    <span></span>
+                
+                    <h2>
+                        교육과 생활을 가까이 누리는<br>
+                        <strong>교육·생활 프리미엄</strong>
+                    </h2>
+                </div>
+            
+                <div class="premium-visual">
+                    <img
+                        class="premium-main-img"
+                        src="./images/location-map.jpg"
+                        alt="교육 및 생활 인프라"
+                    >
+                
+                    <div class="premium-cards premium-cards--2">
+                    
+                        <!-- 밝은 카드 -->
+                        <div class="premium-card premium-card--light">
+                            <div class="premium-card-content">
+                                <small>EDUCATION</small>
+                                <strong>도보권 통학</strong>
+                                <p>양산초•양산중 외 학원가 인접</p>
+                            </div>
+                        
+                            <!-- 아이콘 자리 -->
+                            <div class="premium-card-icon">
+                                <img
+                                    src="./images/icon-education.svg"
+                                    alt=""
+                                >
+                            </div>
+                        </div>
+                    
+                        <!-- 어두운 카드 -->
+                        <div class="premium-card premium-card--dark">
+                            <div class="premium-card-content">
+                                <small>LIVING</small>
+                                <strong>병점역 생활권</strong>
+                                <p>체육공원•하나로마트•복합시설</p>
+                            </div>
+                        
+                            <!-- 아이콘 자리 -->
+                            <div class="premium-card-icon">
+                                <img
+                                    src="./images/icon-living.svg"
+                                    alt=""
+                                >
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+            
+                <p class="premium-description">
+                    병점·동탄 생활권을 잇는 새로운 주거중심
+                </p>
+            
+            </article>
+        
+        
+            <!-- 교통 -->
+            <article class="premium-section js-premium-reveal">
+            
+                <div class="premium-title">
+                    <p>TRAFFIC PREMIUM</p>
+                    <span></span>
+                
+                    <h2>
+                        병점역을 가까이 누리는<br>
+                        <strong>편리한 교통 환경</strong>
+                    </h2>
+                </div>
+            
+                <div class="premium-visual">
+                    <img
+                        class="premium-main-img"
+                        src="./images/traffic.jpg"
+                        alt="서울을 더 빠르게 오가는 쾌속 교통환경"
+                    >
+                
+                    <div class="premium-cards premium-cards--2">
+                    
+                        <div class="premium-card premium-card--light">
+                            <div class="premium-card-content">
+                                <small>SUBWAY</small>
+                                <strong>1호선 역세권</strong>
+                                <p>병점역 1km • 1호선 연장</p>
+                            </div>
+                        
+                            <div class="premium-card-icon">
+                                <img
+                                    src="./images/icon-road.svg"
+                                    alt=""
+                                >
+                            </div>
+                        </div>
+                    
+                        <div class="premium-card premium-card--dark">
+                            <div class="premium-card-content">
+                                <small>FUTURE TRANSIT</small>
+                                <strong>연장 수혜 기대</strong>
+                                <p>GTX-C 연장 및 동탄트램</p>
+                            </div>
+                        
+                            <div class="premium-card-icon">
+                                <img
+                                    src="./images/icon-tram.svg"
+                                    alt=""
+                                >
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+            
+                <p class="premium-description">
+                    서울 접근성을 높이는 미래 교통망
+                </p>
+            
+            </article>
+        
+        
+            <!-- 랜드마크 -->
+            <article class="premium-section js-premium-reveal">
+            
+                <div class="premium-title">
+                    <p>LANDMARK PREMIUM</p>
+                    <span></span>
+                
+                    <h2>
+                        병점의 새로운 주거타운<br>
+                        <strong>자이 프리미엄 대단지</strong>
+                    </h2>
+                </div>
+            
+                <div class="premium-visual">
+                    <img
+                        class="premium-main-img"
+                        src="./images/landmark.jpg"
+                        alt="오산 헤리티지 자이"
+                    >
+                
+                    <div class="premium-cards premium-cards--2">
+                    
+                        <!-- 아이콘이 필요 없으면 premium-card-icon 자체를 생략 -->
+                        <div class="premium-card premium-card--light">
+                            <div class="premium-card-content">
+                                <small>UNIT PLAN</small>
+                                <strong>1BL•2BL</strong>
+                                <p>총 1,783세대 대단지</p>
+                            </div>
+                        </div>
+                    
+                        <div class="premium-card premium-card--dark">
+                            <div class="premium-card-content">
+                                <small>PARKING</small>
+                                <strong>세대당 1.5대</strong>
+                                <p>여유로운 주차공간</p>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+            
+                <p class="premium-description">
+                    병점과 동탄을 잇는 1,783세대 자이 대단지
+                </p>
+            
+            </article>
+        
+        
+            <!-- 단지설계 -->
+            <article class="premium-section js-premium-reveal">
+            
+                <div class="premium-title">
+                    <p>COMPLEX PREMIUM</p>
+                    <span></span>
+                
+                    <h2>
+                        일상을 더 여유롭고 특별하게<br>
+                        <strong>자이 단지설계</strong>
+                    </h2>
+                </div>
+            
+                <div class="premium-visual">
+                    <img
+                        class="premium-main-img"
+                        src="./images/complex-plan.jpg"
+                        alt="오산 헤리티지 자이 단지배치도"
+                    >
+                
+                    <div class="premium-cards premium-cards--2">
+                    
+                        <div class="premium-card premium-card--light">
+                            <div class="premium-card-number">01</div>
+                        
+                            <div class="premium-card-content">
+                                <small>DESIGN</small>
+                                <strong>총 2개 블록</strong>
+                                <p>1,783세대 대단지 스케일의 자이</p>
+                            </div>
+                        </div>
+                    
+                        <div class="premium-card premium-card--dark">
+                            <div class="premium-card-number">02</div>
+                        
+                            <div class="premium-card-content">
+                                <small>GROUND PLAN</small>
+                                <strong>쾌적한 단지 설계</strong>
+                                <p>넉넉한 주차공간•다채로운 커뮤니티</p>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+            
+            </article>
+        
+        
+            <!-- 커뮤니티: 카드 1개형 -->
+            <article class="premium-section js-premium-reveal">
+            
+                <div class="premium-title">
+                    <p>COMMUNITY PREMIUM</p>
+                    <span></span>
+                
+                    <h2>
+                        일상의 편의를 높이는<br>
+                        <strong>다채로운 커뮤니티</strong>
+                    </h2>
+                </div>
+            
+                <div class="premium-visual">
+                    <img
+                        class="premium-main-img"
+                        src="./images/community.jpg"
+                        alt="피트니스 커뮤니티 연출 이미지"
+                    >
+                
+                    <div class="premium-cards premium-cards--1">
+                    
+                        <div class="premium-card premium-card--light">
+                            <div class="premium-card-content">
+                                <small>COMMUNITY</small>
+                                <strong>스카이 뷰 커뮤니티</strong>
+                                <p>CLUB XIAN, 피트니스, 카페테리아, 26층 뷰 커뮤니티</p>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+            
+                <p class="premium-description">
+                    특화 단지설계와 다채로운 커뮤니티로 완성되는 품격 있는 일상
+                </p>
+            
+                <p class="premium-notice">
+                    ※ 상기 이미지는 소비자의 이해를 돕기 위한 연출 이미지입니다.
+                </p>
+            
+            </article>
+        
+        
+            <!-- 계약조건 -->
+            <article class="premium-section js-premium-reveal">
+            
+                <div class="premium-title">
+                    <p>SPECIAL PREMIUM</p>
+                    <span></span>
+                
+                    <h2>
+                        부담을 낮춘<br>
+                        <strong>특별 계약조건</strong>
+                    </h2>
+                </div>
+            
+                <div class="premium-visual">
+                    <img
+                        class="premium-main-img"
+                        src="./images/special-condition.jpg"
+                        alt="아파트 내부 연출 이미지"
+                    >
+                
+                    <div class="premium-cards premium-cards--2">
+                    
+                        <div class="premium-card premium-card--light">
+                            <div class="premium-card-content">
+                                <small>EASY START</small>
+                                <strong>1차 계약금 500만 원</strong>
+                                <p>계약금 5%로 시작</p>
+                            </div>
+                        </div>
+                    
+                        <div class="premium-card premium-card--dark">
+                            <div class="premium-card-content">
+                                <small>CONTRACT</small>
+                                <strong>실거주 의무 無!</strong>
+                                <p>전매 제한 6개월</p>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+            
+                <p class="premium-description">
+                    계약 부담을 낮춰 더 가까워진 내 집 마련
+                </p>
+            
+                <p class="premium-notice">
+                    ※ 상기 이미지는 소비자의 이해를 돕기 위한 연출 이미지입니다.
+                </p>
+            
+            </article>
+        
         </section>
 
+        
+        <!-- <section id="section3" class="details">
+            <h2 class="hidden">울산 문수로 코아루 에듀 스카이</h2>
+            <div class="details-img">
+                <img src="./images/section-1.png" alt="울산 문수로 코아루 에듀 스카이 프리미엄 소개">
+            </div>
+            <div class="details-img">
+                <img src="./images/section-2.png" alt="울산 문수로 코아루 에듀 스카이 프리미엄 소개">
+            </div>
+        </section> -->
+        
 
         <!-- 평형안내(타입) 영역 -->
         <section class="type-section">
-            <h2>
-                <p class="sec-sub-title">오산 헤리티지 자이</p>
-                평형안내
-            </h2>
+            <!-- 평형안내 제목 -->
+            <div class="type-title">
+                <p class="type-label">UNIT PLAN</p>
+                <span class="type-title-line"></span>
+            
+                <h2>
+                    다양한 라이프 스타일<br>
+                    <strong>평형별 공간 설계</strong>
+                </h2>
+            </div>
 
             <!-- 단지 탭 -->
             <div class="complex-tab">
@@ -427,7 +810,7 @@
         <!-- 푸터 -->
         <footer>
           <div class="footer-box">
-              <div class="logo-box"><img src="./images/logo-white.svg" alt="오산 헤리티지 자이 로고"></div>
+              <div class="logo-box"><img src="./images/logo-white.svg" alt="울산 문수로 코아루 에듀 스카이 로고"></div>
               <div class="ad-box">
                 <p class="ad-name">회사명 : <span>애드프로컴퍼니</span></p>
                 <p class="ad-ceo">대표자명 : <span>이길우</span></p>
@@ -443,9 +826,16 @@
 
         <!-- top/bottom 이동버튼 -->
          <div class="quick-btn">
-            <button type="button" id="toTop" aria-label="맨 위로 이동"><i class="fa-solid fa-arrow-up" style="color: rgb(255, 255, 255);"></i></button>
-            <button type="button" id="toBottom" aria-label="맨 아래로 이동"><i class="fa-solid fa-arrow-down" style="color: rgb(255, 255, 255);"></i></button>
-         </div>
+            <button type="button" id="toTop" aria-label="맨 위로 이동">
+                <i class="fa-solid fa-arrow-up"></i>
+            </button>
+        
+            <button type="button" id="toBottom" aria-label="맨 아래로 이동">
+                <i class="fa-solid fa-arrow-down"></i>
+            </button>
+        </div>
+    
+    </div>
     
 </body>
 </html>
