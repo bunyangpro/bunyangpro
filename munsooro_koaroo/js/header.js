@@ -7,11 +7,11 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", function () {
     if (window.scrollY > 60) {
       header.classList.add("scrolled");
-      logo.src = "./images/logo-color.png";
+      logo.src = "./images/logo-color.svg";
       call.src = "./images/call-color.svg";
     } else {
       header.classList.remove("scrolled");
-      logo.src = "./images/logo-white.png";
+      logo.src = "./images/logo-white.svg";
       call.src = "./images/call.svg"
     }
   });
