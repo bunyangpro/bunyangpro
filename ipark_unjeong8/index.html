@@ -11,7 +11,7 @@
     <meta property="og:site_name" content="파주 운정 아이파크 포레스트">
     <meta property="og:title" content="파주 운정 아이파크 포레스트">
     <meta property="og:description" content="파주 운정 아이파크 포레스트, 단지 바로 앞 종합병원, 빛나는 미래 가치. 분양가 상담, 방문예약, 최신 분양정보 안내">
-    <meta property="og:image" content="https://bunyang-page.com/ipark_unjeong8/images/og-image.jpg?v=3">
+    <meta property="og:image" content="https://bunyang-page.com/ipark_unjeong8/images/og-image.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:url" content="https://bunyang-page.com/ipark_unjeong8/">
@@ -33,6 +33,7 @@
     <script src="./js/form.js" defer></script>
     <script src="./js/tab.js" defer></script>
     <script src="./js/popup.js" defer></script>
+    <script src="./js/scroll.js" defer></script>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-6YBPQFFFKG"></script>
@@ -87,6 +88,15 @@
 
     
 
+    <!-- 하단 고정 CTA -->
+    <div class="fixed-cta">
+        <a href="#section5" class="fixed-cta-btn">
+            방문예약 신청하기
+        </a>
+    </div>
+
+    
+
     <!-- 전체 랜딩 wrap -->
     <div class="wrap">
         <!-- 헤더영역 -->
@@ -97,14 +107,14 @@
                  <h1 class="logo">
                     <a href="#section1">
                          <!-- 로고  -->
-                         <img src="./images/logo-white.png" alt="운정 아이파크 포레스트 로고" class="header-logo">
+                         <img src="./images/logo-white.png" alt="파주 운정 아이파크 로고" class="header-logo">
                     </a>
                  </h1>
 
                 <!-- 전화번호 -->
                 <div class="header-phone shake">
                     <a href="tel:1668-1611" class="header-tel">
-                        <span><img src="./images/call.svg" alt="운정 아이파크 포레스트 예약상담 전화번호"></span>
+                        <span><img src="./images/call.svg" alt="파주 운정 아이파크 예약상담 전화번호"></span>
                     </a>
                 </div>
             </div>
@@ -112,42 +122,35 @@
 
         <!-- 섹션1 - 메인영역 -->
             <section id="section1" class="main-section">
-                <!-- 배경 비디오 영역 -->
-               <video class="main-bg" autoplay muted loop playsinline>
-                <source src="./images/hero-sky.mp4" type="video/mp4">
-               </video>
                <div class="main-txt js-ani">
                <!-- 메인 타이틀 영역 -->
-                   <p class="sub-title">단지 앞 종합병원! GTX-A 수혜! </p>
+                   <p class="sub-title">단지 앞 종합병원! GTX-A 수혜까지!</p>
                    <h2>운정 아이파크 포레스트</h2>
-                   <p>운정 최대 규모 3,250세대 대단지</p>
+                   <p>파주 메디컬 클러스터 수혜! 3,250세대 대단지</p>
                </div>
                <!-- 혜택 문구 영역 -->
                 <div class="main-benefits">
                     <!-- 정보 카드 3개 -->
                     <div class="info-grid">
                         <div class="info-card js-ani">
-                          <div class="info-icon"><img src="./images/hero-money.svg" alt="계약금 5%"></div>
                           <div class="info-title">계약금</div>
                           <div class="info-main">5%</div>
                         </div>
                         <div class="info-card js-ani">
-                          <div class="info-icon"><img src="./images/hero-apartment.svg" alt="총 3250세대"></div>
                           <div class="info-title">총</div>
-                          <div class="info-main">3250세대</div>
+                          <div class="info-main">3,250세대</div>
                         </div>
                         <div class="info-card js-ani">
-                          <div class="info-icon"><img src="./images/hero-won.svg" alt="1차 계약금 1천만 원"></div>
                           <div class="info-title">1차 계약금</div>
-                          <div class="info-main">1천만 원</div>
+                          <div class="info-main">1천만원</div>
                         </div>
                     </div>
                     <div class="infra-grid js-ani">
                         <div class="infra-card">
-                            <p><span class="infra-icon"><img src="./images/hero-edu.svg" alt="어린이집, 숲노을초, 동패중•고 등"></span>어린이집, 숲노을초, 동패중•고 등</p>
+                            <p>어린이집, 숲노을초, 동패중•고 등</p>
                         </div>
                         <div class="infra-card">
-                            <p><span class="infra-icon"><img src="./images/hero-traffic.svg" alt="GTX-A 운정중앙역, 자유로 등"></span>GTX-A 운정중앙역, 자유로 등</p>
+                            <p>GTX-A 운정중앙역, 자유로 등</p>
                         </div>
                     </div>
                 </div>
@@ -161,26 +164,17 @@
                 </div>
                <!-- 하단 아파트 이미지 -->
                <div class="bottom-img">
-                   <img src="./images/main-1.png" alt="운정 아이파크 포레스트">
+                   <img src="./images/main-1.jpg" alt="파주 운정 아이파크 조감도">
                </div>
                <!-- 그라디언트 -->
                <div class="main-gradient"></div>
             </section>
 
-            <!-- 이벤트배너 영역 -->
-         <section id="event-benner">
-            <h2 class="hidden">이벤트 영역</h2>
-            <div>
-                <img src="./images/운정-이벤트배너.jpg" alt="방문예약 이벤트 배너">
-                <img src="./images/운정-이벤트배너2.jpg" alt="방문예약 이벤트 배너">
-            </div>
-         </section>
-
         <!-- 방문예약 영역 -->
         <section id="section2" class="visit-form">
            <div class="form-title">
                <h2>
-                   <p class="sec-sub-title">운정 아이파크 포레스트</p>
+                   <p class="sec-sub-title">파주 운정 아이파크</p>
                    방문예약
                </h2>
                <hr>
@@ -242,59 +236,376 @@
            </form>
         </section>
 
-        <section id="section3" class="details">
-            <h2 class="hidden">운정 아이파크 포레스트</h2>
-            <div class="details-img">
-                <img src="./images/section-1.png" alt="운정 아이파크 포레스트 프리미엄 소개">
+        <!-- 이벤트배너 영역 -->
+         <section id="event-benner">
+            <h2 class="hidden">이벤트 영역</h2>
+            <div>
+                <img src="./images/운정-이벤트배너.jpg" alt="방문예약 이벤트 배너">
+                <img src="./images/운정-이벤트배너2.jpg" alt="방문예약 이벤트 배너">
             </div>
-            <div class="details-img">
-                <img src="./images/section-2.png" alt="운정 아이파크 포레스트 프리미엄 소개">
-            </div>
+         </section>
+
+        <!-- 프리미엄 소개 영역 -->
+        <section id="section3" class="premium-list">
+
+            <!-- 프로젝트 인트로 -->
+            <article class="project-intro js-premium-reveal">
+            
+                <!-- 로고 -->
+                <div class="project-intro-logo">
+                    <img
+                        src="./images/logo-color.png"
+                        alt="파주 운정 아이파크 로고"
+                    >
+                </div>
+            
+                <!-- 현장명 -->
+                <h2 class="project-intro-title">
+                    파주 운정 아이파크
+                </h2>
+            
+                <!-- 아파트 이미지 -->
+                <div class="project-intro-image">
+                    <img
+                        src="./images/apartment.jpg"
+                        alt="파주 운정 아이파크 조감도 이미지"
+                    >
+                </div>
+            
+                <!-- 기본정보 -->
+                <div class="project-intro-info">
+                    <p class="project-intro-location">
+                        단지 바로 앞 종합병원!<br/>
+                        파주 메디컬 클러스터 수혜지!
+                    </p>
+                
+                    <p class="project-intro-benefit">
+                        <strong>GTX-A로 강남까지 20분!<br/>파주 최대 규모 대단지<br/>3,250세대 대단지 브랜드 랜드마크</strong>
+                    </p>
+                </div>
+            
+                <!-- 다음 섹션 안내 화살표 -->
+                <a
+                    href="#educationPremium"
+                    class="project-scroll-down"
+                    aria-label="다음 섹션으로 이동"
+                >
+                    <span></span>
+                    <span></span>
+                </a>
+            
+            </article>
+        
+            <!-- 교육·생활 -->
+            <article class="premium-section js-premium-reveal">
+            
+                <div class="premium-title">
+                    <p>LIVING & EDUCATION</p>
+                    <span></span>
+                
+                    <h2>
+                        생활부터 교육까지<br>
+                        <strong>도심 인프라</strong>
+                    </h2>
+                </div>
+            
+                <div class="premium-visual">
+                    <img
+                        class="premium-main-img"
+                        src="./images/education.jpg"
+                        alt="생활 및 교육 인프라"
+                    >
+                
+                    <div class="premium-cards premium-cards--2">
+                    
+                        <!-- 밝은 카드 -->
+                        <div class="premium-card premium-card--light">
+                            <div class="premium-card-content">
+                                <small>EDUCATION</small>
+                                <strong>교육환경</strong>
+                                <p>시립어린이집, 초중고 인접</p>
+                            </div>
+                        
+                            <!-- 아이콘 자리 -->
+                            <div class="premium-card-icon">
+                                <img
+                                    src="./images/icon-education.svg"
+                                    alt="교육 아이콘"
+                                >
+                            </div>
+                        </div>
+                    
+                        <!-- 어두운 카드 -->
+                        <div class="premium-card premium-card--dark">
+                            <div class="premium-card-content">
+                                <small>LIVING</small>
+                                <strong>편리한 생활</strong>
+                                <p>헤이리마을, 스타필드, 아울렛</p>
+                            </div>
+                        
+                            <!-- 아이콘 자리 -->
+                            <div class="premium-card-icon">
+                                <img
+                                    src="./images/icon-living.svg"
+                                    alt="생활 아이콘"
+                                >
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+            
+                <p class="premium-description">
+                    도심의 풍부한 인프라를 가까이 누리는 편리한 생활
+                </p>
+            
+            </article>
+        
+        
+            <!-- 교통 -->
+            <article class="premium-section js-premium-reveal">
+            
+                <div class="premium-title">
+                    <p>TRAFFIC PREMIUM</p>
+                    <span></span>
+                
+                    <h2>
+                        서울을 잇는 GTX-A 운정중앙역<br>
+                        <strong>쾌속 교통망</strong>
+                    </h2>
+                </div>
+            
+                <div class="premium-visual">
+                    <img
+                        class="premium-main-img"
+                        src="./images/traffic.jpg"
+                        alt="교통망"
+                    >
+                
+                    <div class="premium-cards premium-cards--2">
+                    
+                        <div class="premium-card premium-card--light">
+                            <div class="premium-card-content">
+                                <small>SUBWAY</small>
+                                <strong>쾌속교통망</strong>
+                                <p>GTX-A 운정중앙역</p>
+                            </div>
+                        
+                            <div class="premium-card-icon">
+                                <img
+                                    src="./images/icon-tram.svg"
+                                    alt=""
+                                >
+                            </div>
+                        </div>
+                    
+                        <div class="premium-card premium-card--dark">
+                            <div class="premium-card-content">
+                                <small>TRANSIT</small>
+                                <strong>교통도로망</strong>
+                                <p>제2순환고속도로, 자유로 등</p>
+                            </div>
+                        
+                            <div class="premium-card-icon">
+                                <img
+                                    src="./images/icon-tram.svg"
+                                    alt=""
+                                >
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+            
+                <p class="premium-description">
+                    서울 전역을 빠르게 잇는 광역교통망
+                </p>
+            
+            </article>
+        
+        
+            <!-- 랜드마크 -->
+            <article class="premium-section js-premium-reveal">
+            
+                <div class="premium-title">
+                    <p>LANDMARK PREMIUM</p>
+                    <span></span>
+                
+                    <h2>
+                        고품격 숲세권 브랜드 대단지<br>
+                        <strong>파주 운정 아이파크 포레스트</strong>
+                    </h2>
+                </div>
+            
+                <div class="premium-visual">
+                    <img
+                        class="premium-main-img"
+                        src="./images/landmark.jpg"
+                        alt="파주운정아이파크"
+                    >
+                
+                    <div class="premium-cards premium-cards--2">
+                    
+                        <!-- 아이콘이 필요 없으면 premium-card-icon 자체를 생략 -->
+                        <div class="premium-card premium-card--light">
+                            <div class="premium-card-content">
+                                <small>UNITS</small>
+                                <strong>운정 최대 규모</strong>
+                                <p>3,250세대 대단지</p>
+                            </div>
+                        </div>
+                    
+                        <div class="premium-card premium-card--dark">
+                            <div class="premium-card-content">
+                                <small>LANDMARK</small>
+                                <strong>대규모 휴식공간</strong>
+                                <p>5,500평 규모의 랜드마크</p>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+            
+                <p class="premium-description">
+                    숲의 도시, 랜드마크 라이프!
+                </p>
+            
+            </article>
+        
+        
+            <!-- 단지설계 -->
+            <article class="premium-section js-premium-reveal">
+            
+                <div class="premium-title">
+                    <p>BENEFITS PREMIUM</p>
+                    <span></span>
+                
+                    <h2>
+                        고품격 숲세권 대단지<br>
+                        <strong>계약금 & 특별혜택!</strong>
+                    </h2>
+                </div>
+            
+                <div class="premium-visual">
+                    <img
+                        class="premium-main-img"
+                        src="./images/benefits.jpg"
+                        alt="파주 운정 아이파크"
+                    >
+                
+                    <div class="premium-cards premium-cards--2">
+                    
+                        <div class="premium-card premium-card--light">
+                            <div class="premium-card-number">01</div>
+                        
+                            <div class="premium-card-content">
+                                <strong>계약금 5%</strong>
+                                <p>1차 계약금 1천만 원 전매가능</p>
+                            </div>
+                        </div>
+                    
+                        <div class="premium-card premium-card--dark">
+                            <div class="premium-card-number">02</div>
+                        
+                            <div class="premium-card-content">
+                                <strong>방문 특별혜택</strong>
+                                <p>방문 예약시 9가지<br/>
+                                특별한 선물 증정!</p>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+            
+            </article>
+        
+        
+            <!-- 커뮤니티: 카드 1개형 -->
+            <article class="premium-section js-premium-reveal">
+            
+                <div class="premium-title">
+                    <p>COMMUNITY PREMIUM</p>
+                    <span></span>
+                </div>
+            
+                <div class="premium-visual">
+                    <img
+                        class="premium-main-img"
+                        src="./images/community.jpg"
+                        alt="파주운정아이파크 이미지"
+                    >
+                
+                    <div class="premium-cards premium-cards--1">
+                    
+                        <div class="premium-card premium-card--light">
+                            <div class="premium-card-content">
+                                <small>COMMUNITY</small>
+                                <strong>고품격 커뮤니티</strong>
+                                <p>수영장, 실내체육관, 골프, 잔디마당 등 풍부한 커뮤니티 라이프</p>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+            
+                <p class="premium-description">
+                    일상에 여유와 활력을 더하는, 단지 안의 특별한 커뮤니티
+                </p>
+            
+            </article>
+        
         </section>
+        
 
         <!-- 평형안내(타입) 영역 -->
         <section class="type-section">
-            <h2>
-                <p class="sec-sub-title">운정 아이파크 포레스트</p>
-                평형안내
-            </h2>
-            <div class="tab-menu">
-                <button class="tab-btn active" data-tab="type1" >84A㎡</button>
-                <button class="tab-btn" data-tab="type2" >84B㎡</button>
-                <button class="tab-btn" data-tab="type3" >84C㎡</button>
-                <button class="tab-btn" data-tab="type4" >99㎡</button>
-                <button class="tab-btn" data-tab="type5" >113㎡</button>
+            <!-- 평형안내 제목 -->
+            <div class="type-title">
+                <p class="type-label">UNIT PLAN</p>
+                <span class="type-title-line"></span>
+            
+                <h2>
+                    운정 아이파크 포레스트<br>
+                    <strong>다양한 타입 안내</strong>
+                </h2>
             </div>
 
-            <!-- 가로 스크롤 안내 -->
-             <div class="type-scroll">
-                <span class="left-scroll"><img src="./images/left.svg" alt="왼쪽 화살표 이미지"></span>
-                <p>좌우로 스크롤하여 타입을 확인하세요.</p>
-                <span class="right-scroll"><img src="./images/right.svg" alt="오른쪽 화살표 이미지"></span>
-             </div>
+            <div class="tab-menu">
+                <button class="tab-btn active" data-tab="typeA" >84A㎡</button>
+                <button class="tab-btn" data-tab="typeB" >84B㎡</button>
+                <button class="tab-btn" data-tab="typeC" >84C㎡</button>
+                <button class="tab-btn" data-tab="typeD">99㎡</button>
+                <button class="tab-btn" data-tab="typeE">113㎡</button>
+            </div>
+
+            <div class="tab-swipe-guide">
+              <button type="button" class="type-arrow prev" aria-label="이전 타입">‹</button>
+              <span>좌우로 밀어 타입을 확인하세요</span>
+              <button type="button" class="type-arrow next" aria-label="다음 타입">›</button>
+            </div>
 
              
-            <div class="tab-content active" id="type1">
-                <img src="./images/84a.png" alt="84A 타입 평면도 이미지 및 내용">
+            <div class="tab-content active" id="typeA">
+                <img src="./images/84a.jpg" alt="84a 타입 평면도 이미지 및 내용">
             </div>
-            <div class="tab-content" id="type2">
-                <img src="./images/84b.png" alt="84B 타입 평면도 이미지 및 내용">
+            <div class="tab-content" id="typeB">
+                <img src="./images/84b.jpg" alt="84b 타입 평면도 이미지 및 내용">
             </div>
-            <div class="tab-content" id="type3">
-                <img src="./images/84c.png" alt="84C 타입 평면도 이미지 및 내용">
+            <div class="tab-content" id="typeC">
+                <img src="./images/84c.jpg" alt="84C 타입 평면도 이미지 및 내용">
             </div>
-            <div class="tab-content" id="type4">
-                <img src="./images/99.png" alt="99 타입 평면도 이미지 및 내용">
+            <div class="tab-content" id="typeD">
+                <img src="./images/99.jpg" alt="99 타입 평면도 이미지 및 내용">
             </div>
-            <div class="tab-content" id="type5">
-                <img src="./images/113.png" alt="113 타입 평면도 이미지 및 내용">
+            <div class="tab-content" id="typeE">
+                <img src="./images/113.jpg" alt="113 타입 평면도 이미지 및 내용">
             </div>
         </section>
 
         <!-- 사업개요 영역 -->
         <section id="section4" class="summary">
         <h2>
-            <p class="sec-sub-title">운정 아이파크 포레스트</p>
+            <p class="sec-sub-title">파주 운정 아이파크</p>
             사업개요
         </h2>
         <ul class="summary-list">
@@ -321,7 +632,7 @@
                     <div class="summary-icon"><img src="./images/summary-3.svg" alt="규모"></div>
                     <div class="summary-txt">
                         <p class="summary-main-txt">규모</p>
-                        <p class="summary-sub-txt">아파트 지하 2층~ 지상 29층, 25개동, 총 3,250세대</p>
+                        <p class="summary-sub-txt">아파트 지하 2층 ~ 지상 29층, 25개동, 총 3,250세대</p>
                     </div>
                 </div>
             </li>
@@ -341,7 +652,7 @@
         <section id="section5" class="visit-form">
         <div class="form-title">
             <h2>
-                <p class="sec-sub-title">운정 아이파크 포레스트</p>
+                <p class="sec-sub-title">파주 운정 아이파크</p>
                 방문예약
             </h2>
             <hr>
@@ -406,7 +717,7 @@
         <!-- 푸터 -->
         <footer>
           <div class="footer-box">
-              <div class="logo-box"><img src="./images/logo-white.png" alt="운정 아이파크 포레스트 로고"></div>
+              <div class="logo-box"><img src="./images/logo-white.png" alt="파주 운정 아이파크 로고"></div>
               <div class="ad-box">
                 <p class="ad-name">회사명 : <span>애드프로컴퍼니</span></p>
                 <p class="ad-ceo">대표자명 : <span>이길우</span></p>
@@ -415,16 +726,21 @@
                 <p class="ad-numb">사업자 번호 : <span>258-32-01685</span></p>
               </div>
               <p class="footer-call"><a href="tel:1668-1611"><img src="./images/call.svg" alt="문의하기 아이콘"></a> <span>문의하기</span></p>
-              <p>© 2026 운정아이파크포레스트. All rights reserved.</p>
+              <p>© 2026 파주운정 아이파크. All rights reserved.</p>
           </div>
         </footer>
 
 
         <!-- top/bottom 이동버튼 -->
          <div class="quick-btn">
-            <button type="button" id="toTop" aria-label="맨 위로 이동"><i class="fa-solid fa-arrow-up" style="color: rgb(255, 255, 255);"></i></button>
-            <button type="button" id="toBottom" aria-label="맨 아래로 이동"><i class="fa-solid fa-arrow-down" style="color: rgb(255, 255, 255);"></i></button>
-         </div>
+            <button type="button" id="toTop" aria-label="맨 위로 이동">
+                <i class="fa-solid fa-arrow-up"></i>
+            </button>
+        
+            <button type="button" id="toBottom" aria-label="맨 아래로 이동">
+                <i class="fa-solid fa-arrow-down"></i>
+            </button>
+        </div>
 
     </div>
     
