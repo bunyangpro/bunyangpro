@@ -326,7 +326,7 @@ a {
   margin: 0 0 5px;
 
   color: #fff;
-  font-size: 17px;
+  font-size: 15px;
   line-height: 1.25;
   font-weight: 700;
   letter-spacing: -0.8px;
@@ -335,7 +335,7 @@ a {
 
 .info-main {
   color: #f4cf73;
-  font-size: 22px;
+  font-size: 19px;
   line-height: 1.15;
   font-weight: 900;
   letter-spacing: -1px;
@@ -2189,6 +2189,27 @@ html.reveal-ready
 .visit-form .form-group > input:not([type="checkbox"]):focus,
 .visit-form .form-group > select:focus {
     border-color: #b88a42;
+}
+
+.header-phone {
+  width: auto;
+  height: auto;
+}
+
+.header-tel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.header-tel img {
+  width: 32px;
+}
+
+.phone-number {
+  font-size: 13px;
+  white-space: nowrap;
 }
 
 /* 모바일 브라우저 확대 및 크기 변형 방지 */
