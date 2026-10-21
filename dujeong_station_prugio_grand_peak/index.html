@@ -25,6 +25,8 @@
     <!-- css 및 폰트어썸 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./css/import.css">
+    <!-- 스타벅스 이벤트 팝업 스타일 -->
+    <link rel="stylesheet" href="./css/event-popup.css">
 
     <!-- js -->
     <script src="./js/header.js" defer></script>
@@ -34,7 +36,8 @@
     <script src="./js/tab.js" defer></script>
     <script src="./js/popup.js" defer></script>
     <script src="./js/scroll.js" defer></script>
-
+    <!-- 스타벅스 이벤트 팝업 동작 -->
+    <script src="./js/event-popup.js" defer></script>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-6YBPQFFFKG"></script>
@@ -86,7 +89,21 @@
     
 </head>
 <body>
-
+    <!-- 스타벅스 이벤트 팝업 시작 -->
+    <dialog id="eventPopup" class="event-popup" aria-labelledby="eventPopupTitle" aria-describedby="eventPopupDescription">
+        <button type="button" class="event-popup-close" aria-label="이벤트 팝업 닫기" autofocus>×</button>
+        <div class="event-popup-content">
+            <p class="event-popup-eyebrow">SPECIAL EVENT</p>
+            <p class="event-popup-project">두정역 푸르지오 그랑피크</p>
+            <h2 id="eventPopupTitle">방문예약만 해도<br><strong>스타벅스 상품권</strong><br>증정!</h2>
+            <img class="event-popup-image" src="./images/starbucks.png" alt="스타벅스 아이스 커피" width="201" height="299">
+            <p id="eventPopupDescription">모델하우스 관람을 사전예약하고<br>스타벅스 혜택을 받아보세요.</p>
+            <button type="button" class="event-popup-reserve">방문예약하고 혜택 받기 <span aria-hidden="true">→</span></button>
+            <button type="button" class="event-popup-dismiss">닫기</button>
+        </div>
+    </dialog>
+    <!-- 스타벅스 이벤트 팝업 끝 -->
+     
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5WRDR7W6"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -324,8 +341,8 @@
                             <!-- 아이콘 자리 -->
                             <div class="premium-card-icon">
                                 <img
-                                    src="./images/icon-education.svg"
-                                    alt="교육 아이콘"
+                                    src="./images/icon-tree.svg"
+                                    alt="나무 아이콘"
                                 >
                             </div>
                         </div>
@@ -388,8 +405,8 @@
                         
                             <div class="premium-card-icon">
                                 <img
-                                    src="./images/icon-road.svg"
-                                    alt="도로 아이콘"
+                                    src="./images/icon-tram.svg"
+                                    alt="철도 아이콘"
                                 >
                             </div>
                         </div>
@@ -403,8 +420,8 @@
                         
                             <div class="premium-card-icon">
                                 <img
-                                    src="./images/icon-work.svg"
-                                    alt="일 이미지"
+                                    src="./images/icon-road.svg"
+                                    alt="도로 아이콘"
                                 >
                             </div>
                         </div>
