@@ -11,7 +11,7 @@
     <meta property="og:site_name" content="원주 행구동 골드클래스">
     <meta property="og:title" content="원주 행구동 골드클래스">
     <meta property="og:description" content="원주 행구동 골드클래스, 3억으로 내집마련, 실입주금 3,500만원">
-    <meta property="og:image" content="https://bunyang-page.com/wonju_goldclass/images/wonju_goldclass_og_image_2.jpg">
+    <meta property="og:image" content="https://bunyang-page.com/wonju_goldclass/images/wonju_goldclass_og_image_3.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:url" content="https://bunyang-page.com/wonju_goldclass/images/">
@@ -21,7 +21,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="원주 행구동 골드클래스">
     <meta name="twitter:description" content="원주 행구동 골드클래스, 3억으로 내집마련, 실입주금 3,500만원">
-    <meta name="twitter:image" content="https://bunyang-page.com/wonju_goldclass/images/wonju_goldclass_og_image_2.jpg">
+    <meta name="twitter:image" content="https://bunyang-page.com/wonju_goldclass/images/wonju_goldclass_og_image_3.jpg">
     <!-- css 및 폰트어썸 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./css/import.css">
@@ -127,49 +127,13 @@
                     </a>
                  </h1>
 
-                <!-- 전화번호 -->
-                <div class="header-phone shake">
-                    <a href="tel:1877-7967" class="header-tel">
-                        <span><img src="./images/call.svg" alt="원주 행구동 골드클래스 예약상담 전화번호"></span>
-                    </a>
-                </div>
+                
             </div>
         </header>
 
         <!-- 섹션1 - 메인영역 -->
             <section id="section1" class="main-section">
-               <div class="main-txt js-ani">
-               <!-- 메인 타이틀 영역 -->
-                   <p class="sub-title">전용 84㎡ 아파트 3억원대부터</p>
-                   <h2>(대표) 원주<br>행구동 골드클래스</h2>
-                   <p>실입주금 3,500만원부터<br>잔금 5,000만원 무이자 유예</p>
-               </div>
-               <!-- 혜택 문구 영역 -->
-                <div class="main-benefits">
-                    <!-- 정보 카드 3개 -->
-                    <div class="info-grid">
-                        <div class="info-card js-ani">
-                          <div class="info-title">1차 계약금</div>
-                          <div class="info-main">500만원</div>
-                        </div>
-                        <div class="info-card js-ani">
-                          <div class="info-title">총</div>
-                          <div class="info-main">402세대</div>
-                        </div>
-                        <div class="info-card js-ani">
-                          <div class="info-title">실입주금</div>
-                          <div class="info-main">3,500만원~</div>
-                        </div>
-                    </div>
-                    <div class="infra-grid js-ani">
-                        <div class="infra-card">
-                            <p>반곡초·반곡중·원주여고 도보 통학권</p>
-                        </div>
-                        <div class="infra-card">
-                            <p>잔금 5,000만원 최대 2년 무이자 유예</p>
-                        </div>
-                    </div>
-                </div>
+               
                <!-- 스크롤 애니메이션 -->
                 <div class="scroll-down">
                    <div class="scroll-icon">
@@ -182,34 +146,52 @@
                <div class="bottom-img">
                    <img src="./images/main-1.jpg" alt="원주 행구동 골드클래스 조감도">
                </div>
-               <!-- 그라디언트 -->
-               <div class="main-gradient"></div>
-            </section>
 
-        <!-- 프로모션 추가 영역 -->            
-        <section class="promotion-image-section" aria-label="원주 행구동 골드클래스 특별분양 소개">
-            <img src="./images/promotion_1.jpg" alt="원주 행구동 골드클래스 특별분양 소개" width="922" height="1382" loading="lazy" decoding="async" style="display:block; width:100%; height:auto;">
-            <img src="./images/promotion_2.jpg" alt="원주 행구동 골드클래스 교육 및 생활 입지 안내" width="922" height="1382" loading="lazy" decoding="async" style="display:block; width:100%; height:auto;">
-            <img src="./images/promotion_3.jpg" alt="원주 행구동 골드클래스 인테리어 및 방문예약 혜택 안내" width="657" height="1533" loading="lazy" decoding="async" style="display:block; width:100%; height:auto;">
-        </section>
+               <!-- 전화번호: 골드 테두리 상담 버튼 / 이 영역에서 스타일 수정 -->
+                <style id="section1-call-button-style">
+                    /* 이미지 원본(800 × 1440)과 버튼의 상대 위치를 함께 유지 */
+                    #section1.main-section { height: auto; min-height: 0; aspect-ratio: 800 / 1440; }
+                    #section1 .bottom-img img { object-fit: contain; }
+                    #section1 .header-phone { position: absolute; z-index: 4; top: calc(76.5% - 3px); bottom: auto; left: 50%; transform: translateX(-50%); width: min(590px, calc(100% - 32px)); height: auto; animation: none; container-type: inline-size; }
+                    #section1 .header-tel.call-banner {
+                        box-sizing: border-box; position: relative; display: grid; grid-template-columns: 10% 14% minmax(0, 1fr) 10%;
+                        align-items: center; justify-content: center; gap: 1%; width: 100%;
+                        padding: 1.5% 4%; border: 3px solid #ffe883; border-radius: 100px;
+                        background: linear-gradient(180deg, #ff3153 0%, #ec0033 30%, #bd001a 65%, #79000b 100%);
+                        box-shadow: inset 0 2px 4px #fff7, inset 0 -3px 6px #590000, 0 0 8px #ffbf39a6;
+                        color: white; text-decoration: none; white-space: nowrap; line-height: 1;
+                        font-family: Arial, 'Noto Sans KR', sans-serif;
+                    }
+                    #section1 .call-banner::after { content: ''; position: absolute; bottom: -5px; left: 25%; width: 58px; height: 6px; border-radius: 50%; background: #fffbd5; filter: blur(3px); box-shadow: 0 0 9px 2px #ffe071; pointer-events: none; }
+                    #section1 .call-banner .call-icon { display: flex; width: 100%; flex-shrink: 0; transform-origin: 50% 50%; animation: call-icon-blink 1.3s ease-in-out infinite, call-icon-ring 1.8s ease-in-out infinite; }
+                    #section1 .call-banner .call-icon svg { display: block; width: 100%; height: auto; overflow: visible; }
+                    #section1 .call-banner .call-label { color: #fff; font-size: 4cqw; font-weight: 900; letter-spacing: -1px; }
+                    #section1 .call-banner .call-number { display: block; min-width: 0; text-align: center; font-family: Impact, 'Arial Narrow', sans-serif; font-size: 10.5cqw; font-weight: 400; letter-spacing: 0; font-kerning: none; font-variant-numeric: tabular-nums; color: #fff47c; background: linear-gradient(#ffffb6 15%, #fff384 40%, #ffd535 80%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(1px 3px 1px #6c1600); }
+                    #section1 .call-banner .call-arrow { display: flex; align-items: center; justify-content: center; width: 100%; aspect-ratio: 1; flex-shrink: 0; margin-left: auto; border-radius: 50%; background: linear-gradient(#fff, #e8e8e8); box-shadow: 0 1px 2px #7004; }
+                    #section1 .call-banner .call-arrow svg { width: 45%; height: 45%; }
+                    #section1 .call-banner:focus-visible { outline: 3px solid #fff; outline-offset: 4px; }
+                    @keyframes call-icon-ring { 0%, 40%, 100% { transform: rotate(0deg); } 8%, 24% { transform: rotate(-12deg); } 16%, 32% { transform: rotate(12deg); } }
+                    @keyframes call-icon-blink { 0%, 100% { opacity: 1; } 50% { opacity: .22; } }
+                    @media (max-width: 600px) {
 
-        <!-- 관심 고객 등록 현황 시작 -->
-        <section class="customer-status" aria-labelledby="customerStatusTitle">
-            <div class="customer-status-card">
-                <h2 class="customer-status-title" id="customerStatusTitle">실시간 관심 고객 등록 현황</h2>
-                <div role="table" aria-label="관심 고객 등록 예시 목록">
-                    <div class="customer-status-columns" role="row">
-                        <span role="columnheader">접수일</span>
-                        <span role="columnheader">이름</span>
-                        <span role="columnheader">연락처</span>
-                    </div>
-                    <div class="customer-status-viewport">
-                        <div class="customer-status-track" id="customerStatusTrack" role="rowgroup"></div>
-                    </div>
+
+                        #section1 .header-phone { width: calc(100% - 32px); max-width: 480px; container-type: inline-size; top: calc(76.5% - 3px); bottom: auto; }
+                        #section1 .header-tel.call-banner { gap: 1%; padding: 1.5% 4%; border-width: 2px; }
+                        #section1 .call-banner .call-label { font-size: 4cqw; letter-spacing: -.6px; }
+                        #section1 .call-banner .call-number { font-size: 10.5cqw; letter-spacing: 0; }
+                    }
+                    @media (prefers-reduced-motion: reduce) { #section1 .header-phone, #section1 .call-banner .call-icon { animation: none; } }
+                </style>
+                <div class="header-phone">
+                    <a href="tel:1877-7967" class="header-tel call-banner" aria-label="대표번호 1877-7967 전화하기">
+                        <span class="call-icon" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none"><path d="M13 8c-5 2-8 8-7 14 3 17 16 30 33 35 6 2 12-1 15-6l-12-12-8 6c-7-3-13-9-16-16l6-8L13 8Z" fill="white"/><path d="M35 8c11 1 20 10 21 21M35 17c6 1 11 6 12 12" stroke="white" stroke-width="4"/></svg></span>
+                        <span class="call-label">대표번호</span>
+                        <span class="call-number">1877-7967</span>
+                        <span class="call-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="m9 4 8 8-8 8" stroke="#bf002a" stroke-width="4"/></svg></span>
+                    </a>
                 </div>
-            </div>
-        </section>
-        <!-- 관심 고객 등록 현황 끝 -->
+
+            </section>
 
         <!-- 방문예약 영역 -->
         <section id="section2" class="visit-form">
@@ -276,6 +258,31 @@
                <button type="submit" class="submitBtn">제출하기</button>
            </form>
         </section>
+
+        <!-- 프로모션 추가 영역 -->            
+        <section class="promotion-image-section" aria-label="원주 행구동 골드클래스 특별분양 소개">
+            <img src="./images/promotion_1.jpg" alt="원주 행구동 골드클래스 특별분양 소개" width="922" height="1382" loading="lazy" decoding="async" style="display:block; width:100%; height:auto;">
+            <img src="./images/promotion_2.jpg" alt="원주 행구동 골드클래스 교육 및 생활 입지 안내" width="922" height="1382" loading="lazy" decoding="async" style="display:block; width:100%; height:auto;">
+            <img src="./images/promotion_3.jpg" alt="원주 행구동 골드클래스 인테리어 및 방문예약 혜택 안내" width="657" height="1533" loading="lazy" decoding="async" style="display:block; width:100%; height:auto;">
+        </section>
+
+        <!-- 관심 고객 등록 현황 시작 -->
+        <section class="customer-status" aria-labelledby="customerStatusTitle">
+            <div class="customer-status-card">
+                <h2 class="customer-status-title" id="customerStatusTitle">실시간 관심 고객 등록 현황</h2>
+                <div role="table" aria-label="관심 고객 등록 예시 목록">
+                    <div class="customer-status-columns" role="row">
+                        <span role="columnheader">접수일</span>
+                        <span role="columnheader">이름</span>
+                        <span role="columnheader">연락처</span>
+                    </div>
+                    <div class="customer-status-viewport">
+                        <div class="customer-status-track" id="customerStatusTrack" role="rowgroup"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 관심 고객 등록 현황 끝 -->
 
         <!-- 프리미엄 소개 영역 -->
         <section id="section3" class="premium-list">
@@ -751,8 +758,8 @@
                 <p class="ad-name">현장명 : <span>원주 행구동 골드클래스</span></p>
                 <p class="ad-address">현장 주소 : <span>강원특별자치도 원주시 영랑길 20</span></p>
                 <p class="ad-address">홍보관 주소 : <span>강원특별자치도 원주시 영랑길 20-1,<br>골드클래스 상가 405호</span></p>
-                <p class="ad-ceo">분양상담 대표자 : <span>운진희 팀장</span></p>
-                <p class="ad-call">분양상담 대표번호 : <span>010-2790-4862</span></p>
+                <p class="ad-ceo">대표 : <span>원주 골드클래스</span></p>
+                <p class="ad-call">대표번호 : <span>1877-7967</span></p>
               </div>
               <p class="footer-call"><a href="tel:1877-7967"><img src="./images/call.svg" alt="문의하기 아이콘"></a> <span>문의하기</span></p>
               <p>© 2026 원주 행구동 골드클래스. All rights reserved.</p>
