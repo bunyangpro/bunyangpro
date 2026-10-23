@@ -82,7 +82,21 @@
      gtag('config', 'AW-18249583990');
      </script>
 
-    
+     <!-- 관심 고객 현황 전용 스타일: 기존 페이지 스타일과 충돌하지 않도록 범위 제한 -->
+    <style>
+        .customer-status { padding: 32px 16px; background: #fff; color: #101a2b; }
+        .customer-status-card { max-width: 780px; margin: 0 auto; overflow: hidden; border: 2px solid #f0eee5; border-radius: 0; }
+        .customer-status-title { margin: 0; padding: 22px 8px; background: linear-gradient(105deg,#ffce58,#fff19a,#f9ba30); text-align: center; font-size: clamp(18px,4vw,26px); font-weight: 900; letter-spacing: -1px; }
+        .customer-status-columns, .customer-status-row { display: grid; grid-template-columns: minmax(0,1.05fr) minmax(0,.8fr) minmax(0,1.2fr); align-items: center; text-align: center; }
+        .customer-status-columns { min-height: 65px; background: #1c2c46; color: #fff; font-size: clamp(13px,3vw,17px); font-weight: 800; }
+        /* 하단 데이터 행: 빨간 테두리 없이 흰색 배경 적용 */
+        .customer-status-viewport { height: 64px; overflow: hidden; background: #fff; }
+        .customer-status-track { transform: translateY(0); }
+        .customer-status-row { height: 64px; background: #fff; font-size: clamp(12px,2.8vw,16px); font-weight: 600; white-space: nowrap; }
+        .customer-status-track.is-moving { transition: transform .65s ease; transform: translateY(-64px); }
+        .customer-status-note { margin: 12px 0 0; text-align: center; font-size: 12px; color: #666; }
+    </style>
+
 </head>
 <body>     
     <!-- Google Tag Manager (noscript) -->
@@ -177,8 +191,25 @@
             <img src="./images/promotion_1.jpg" alt="원주 행구동 골드클래스 특별분양 소개" width="922" height="1382" loading="lazy" decoding="async" style="display:block; width:100%; height:auto;">
             <img src="./images/promotion_2.jpg" alt="원주 행구동 골드클래스 교육 및 생활 입지 안내" width="922" height="1382" loading="lazy" decoding="async" style="display:block; width:100%; height:auto;">
             <img src="./images/promotion_3.jpg" alt="원주 행구동 골드클래스 인테리어 및 방문예약 혜택 안내" width="657" height="1533" loading="lazy" decoding="async" style="display:block; width:100%; height:auto;">
-            <img src="./images/promotion_4.jpg" alt="원주 행구동 골드클래스 추가 분양 안내" loading="lazy" decoding="async" style="display:block; width:100%; height:auto;">
         </section>
+
+        <!-- 관심 고객 등록 현황 시작 -->
+        <section class="customer-status" aria-labelledby="customerStatusTitle">
+            <div class="customer-status-card">
+                <h2 class="customer-status-title" id="customerStatusTitle">실시간 관심 고객 등록 현황</h2>
+                <div role="table" aria-label="관심 고객 등록 예시 목록">
+                    <div class="customer-status-columns" role="row">
+                        <span role="columnheader">접수일</span>
+                        <span role="columnheader">이름</span>
+                        <span role="columnheader">연락처</span>
+                    </div>
+                    <div class="customer-status-viewport">
+                        <div class="customer-status-track" id="customerStatusTrack" role="rowgroup"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 관심 고객 등록 현황 끝 -->
 
         <!-- 방문예약 영역 -->
         <section id="section2" class="visit-form">
@@ -741,6 +772,55 @@
         </div>
 
     </div>
+
+
+    <!-- 관심 고객 현황 동작: 예시 데이터를 3초 간격으로 표시 -->
+    <script>
+    (() => {
+        const track = document.getElementById('customerStatusTrack');
+        if (!track) return;
+        const customers = [
+            ['권*국', '010-5***-****'], ['황*름', '010-2***-****'],
+            ['이*람', '010-7***-****'], ['김*수', '010-3***-****'],
+            ['박*연', '010-8***-****'], ['정*우', '010-4***-****'],
+            ['최*서', '010-6***-****'], ['윤*호', '010-9***-****'],
+            ['장*진', '010-1***-****'], ['한*민', '010-5***-****']
+        ];
+        // 예시 날짜는 페이지를 여는 시점의 한국 날짜를 사용합니다.
+        const date = '2026-10-30';
+        const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+        let current = 0;
+        function createRow(index) {
+            const row = document.createElement('div');
+            row.className = 'customer-status-row';
+            row.setAttribute('role', 'row');
+            [date, ...customers[index]].forEach(value => {
+                const cell = document.createElement('span');
+                cell.setAttribute('role', 'cell');
+                cell.textContent = value;
+                row.appendChild(cell);
+            });
+            return row;
+        }
+        function renderRows() {
+            track.replaceChildren(createRow(current), createRow((current + 1) % customers.length));
+        }
+        function finishSlide() {
+            current = (current + 1) % customers.length;
+            track.classList.remove('is-moving');
+            renderRows();
+        }
+        track.addEventListener('transitionend', event => {
+            if (event.target === track && event.propertyName === 'transform') finishSlide();
+        });
+        renderRows();
+        setInterval(() => {
+            if (document.hidden || track.classList.contains('is-moving')) return;
+            if (reducedMotion.matches) finishSlide();
+            else track.classList.add('is-moving');
+        }, 3000);
+    })();
+    </script>
     
 </body>
 </html>
