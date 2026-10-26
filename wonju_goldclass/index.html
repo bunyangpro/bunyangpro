@@ -272,7 +272,7 @@
                 <h2 class="customer-status-title" id="customerStatusTitle">실시간 관심 고객 등록 현황</h2>
                 <div role="table" aria-label="관심 고객 등록 예시 목록">
                     <div class="customer-status-columns" role="row">
-                        <span role="columnheader">접수일</span>
+                        <span role="columnheader">예약일자</span>
                         <span role="columnheader">이름</span>
                         <span role="columnheader">연락처</span>
                     </div>
@@ -787,21 +787,21 @@
         const track = document.getElementById('customerStatusTrack');
         if (!track) return;
         const customers = [
-            ['권*국', '010-5***-****'], ['황*름', '010-2***-****'],
-            ['이*람', '010-7***-****'], ['김*수', '010-3***-****'],
-            ['박*연', '010-8***-****'], ['정*우', '010-4***-****'],
-            ['최*서', '010-6***-****'], ['윤*호', '010-9***-****'],
-            ['장*진', '010-1***-****'], ['한*민', '010-5***-****']
+            ['2026-10-31', '권*국', '010-5***-****'],
+            ['2026-10-31', '황*름', '010-2***-****'],
+            ['2026-11-01', '이*람', '010-7***-****'],
+            ['2026-11-05', '김*수', '010-3***-****'],
+            ['2026-11-07', '박*연', '010-8***-****'],
+            ['2026-11-08', '정*우', '010-4***-****'],
+            ['2026-11-08', '최*서', '010-6***-****']
         ];
-        // 예시 날짜는 페이지를 여는 시점의 한국 날짜를 사용합니다.
-        const date = '2026-10-30';
         const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
         let current = 0;
         function createRow(index) {
             const row = document.createElement('div');
             row.className = 'customer-status-row';
             row.setAttribute('role', 'row');
-            [date, ...customers[index]].forEach(value => {
+            customers[index].forEach(value => {
                 const cell = document.createElement('span');
                 cell.setAttribute('role', 'cell');
                 cell.textContent = value;
