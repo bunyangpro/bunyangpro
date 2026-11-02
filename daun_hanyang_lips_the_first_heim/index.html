@@ -85,7 +85,21 @@
     
 </head>
 <body>
-     
+    <!-- 이벤트 팝업 시작 -->
+    <dialog id="eventPopup" class="event-popup" aria-labelledby="eventPopupTitle" aria-describedby="eventPopupDescription">
+        <button type="button" class="event-popup-close" aria-label="이벤트 팝업 닫기" autofocus>×</button>
+        <div class="event-popup-content">
+            <p class="event-popup-eyebrow">SPECIAL EVENT</p>
+            <p class="event-popup-project">다운한양립스 퍼스트하임</p>
+            <h2 id="eventPopupTitle">예약 방문 후 부부 동반 상담<br><strong>CJ기프트 1만원권</strong><br>증정!</h2>
+            <img class="event-popup-image" src="./images/starbucks.png" alt="스타벅스 아이스 커피" width="201" height="299">
+            <p id="eventPopupDescription">모델하우스 관람을 사전예약하고<br>사은품 혜택을 받아보세요.</p>
+            <button type="button" class="event-popup-reserve">방문예약하고 혜택 받기 <span aria-hidden="true">→</span></button>
+            <button type="button" class="event-popup-dismiss">닫기</button>
+        </div>
+    </dialog>
+    <!-- 이벤트 팝업 끝 -->
+
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5WRDR7W6"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
