@@ -1341,6 +1341,7 @@ HTML의 .premium-card-icon 태그만 삭제하면 됨
   font-size: 14px;
   font-weight: 700;
   white-space: nowrap;
+  margin: auto;
 }
 
 /* 탭 아래 스와이프 안내 */
