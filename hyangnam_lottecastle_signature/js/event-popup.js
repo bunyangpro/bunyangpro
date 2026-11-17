@@ -1,44 +1,46 @@
-// 같은 탭의 방문 세션에서 한 번만 표시합니다. 새로고침해도 유지됩니다.
 (() => {
-    const popup = document.getElementById("eventPopup");
-    const storageKey = "dujeong-starbucks-event-shown-v1";
-    if (!popup || typeof popup.showModal !== "function") return;
-
-    try {
-        if (sessionStorage.getItem(storageKey)) return;
-    } catch (_) {
-        // 저장소가 차단된 브라우저에서도 팝업을 사용할 수 있게 합니다.
-    }
-
-    const previousOverflow = document.documentElement.style.overflow;
-    const previousFocus = document.activeElement;
-    let movingToForm = false;
-
-    popup.querySelector(".event-popup-close").addEventListener("click", () => popup.close());
-    popup.querySelector(".event-popup-dismiss").addEventListener("click", () => popup.close());
-    popup.addEventListener("click", (event) => {
-        const rect = popup.getBoundingClientRect();
-        if (event.target === popup && (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom)) popup.close();
-    });
-    popup.addEventListener("close", () => {
-        document.documentElement.style.overflow = previousOverflow;
-        if (movingToForm) {
-            const section = document.getElementById("section5");
-            const input = document.getElementById("nameTop");
-            input?.focus({ preventScroll: true });
-            section?.scrollIntoView({ behavior: "instant", block: "start" });
-        } else {
-            previousFocus?.focus({ preventScroll: true });
-        }
-    });
-    popup.querySelector(".event-popup-reserve").addEventListener("click", () => {
-        movingToForm = true;
-        popup.close();
-    });
-
-    popup.showModal();
-    document.documentElement.style.overflow = "hidden";
-    try {
-        sessionStorage.setItem(storageKey, "1");
-    } catch (_) { /* 저장소 제한 시 현재 페이지에서만 한 번 표시 */ }
+  const popup = document.getElementById("hyangnamEventPopup");
+  if (!popup || typeof popup.showModal !== "function") return;
+  const slides = [...popup.querySelectorAll(".hn-event-slide")];
+  const closeButton = popup.querySelector("[data-hn-close]");
+  if (!slides.length || !closeButton) return;
+  const gallery = popup.querySelector(".hn-event-gallery");
+  const previousFocus = document.activeElement;
+  const previousOverflow = document.documentElement.style.overflow;
+  let current = 0;
+  let advancing = false;
+  let timer;
+  const showSlide = () => {
+    slides.forEach((slide, index) => { slide.hidden = index !== current; });
+    closeButton.setAttribute("aria-label", (current + 1) + "번째 이벤트 팝업 닫기");
+  };
+  const advance = () => {
+    if (advancing || !popup.open) return;
+    advancing = true;
+    if (current === slides.length - 1) { popup.close(); return; }
+    slides[current].hidden = true;
+    closeButton.hidden = true;
+    timer = setTimeout(() => {
+      current += 1;
+      showSlide();
+      closeButton.hidden = false;
+      advancing = false;
+      gallery.focus({ preventScroll: true });
+    }, 250);
+  };
+  closeButton.addEventListener("click", advance);
+  popup.addEventListener("click", event => {
+    const rect = popup.getBoundingClientRect();
+    if (event.target === popup && (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom)) advance();
+  });
+  popup.addEventListener("cancel", event => { event.preventDefault(); advance(); });
+  popup.addEventListener("close", () => {
+    clearTimeout(timer);
+    document.documentElement.style.overflow = previousOverflow;
+    previousFocus?.focus({ preventScroll: true });
+  });
+  showSlide();
+  popup.showModal();
+  gallery.focus({ preventScroll: true });
+  document.documentElement.style.overflow = "hidden";
 })();

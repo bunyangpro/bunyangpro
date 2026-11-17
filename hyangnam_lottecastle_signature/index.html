@@ -82,7 +82,10 @@
      gtag('config', 'AW-18249583990');
      </script>
 
-    
+    <!-- 팝업 -->
+    <link rel="stylesheet" href="./css/hyangnam-event.css">
+    <script src="./js/event-popup.js" defer></script>
+
 </head>
 <body>
      
@@ -116,7 +119,7 @@
 
                 <!-- 전화번호 -->
                 <div class="header-phone shake">
-                    <a href="tel:1551-1542" class="header-tel">
+                    <a href="tel:1844-0793" class="header-tel">
                         <span><img src="./images/call.svg" alt="향남 롯데캐슬 시그니처 예약상담 전화번호"></span>
                     </a>
                 </div>
@@ -733,7 +736,7 @@
         <footer>
           <div class="footer-box">
               <div class="logo-box"><img src="./images/logo-white.svg" alt="향남 롯데캐슬 시그니처 로고"></div>
-              <p class="footer-call"><a href="tel:1551-1542"><img src="./images/call.svg" alt="문의하기 아이콘"></a> <span>문의하기</span></p>
+              <p class="footer-call"><a href="tel:1844-0793"><img src="./images/call.svg" alt="문의하기 아이콘"></a> <span>문의하기</span></p>
               <p>© 2026 향남 롯데캐슬 시그니처. All rights reserved.</p>
           </div>
         </footer>
@@ -751,6 +754,42 @@
         </div>
 
     </div>
-    
+
+    <dialog
+    id="hyangnamEventPopup"
+    class="hn-event"
+    aria-label="향남 롯데캐슬 시그니처 방문 예약 이벤트"
+    >
+    <button
+        type="button"
+        class="hn-event-close"
+        data-hn-close
+        aria-label="이벤트 팝업 닫기"
+    >×</button>
+
+    <div class="hn-event-gallery" tabindex="-1" autofocus>
+        <div class="hn-event-slide">
+        <img
+            src="./images/hyangnam-event-1.png"
+            alt="방문 예약 이벤트 첫 번째 안내"
+        >
+        </div>
+
+        <div class="hn-event-slide" hidden>
+        <img
+            src="./images/hyangnam-event-2.png"
+            alt="방문 예약 이벤트 두 번째 안내"
+        >
+        </div>
+
+        <div class="hn-event-slide" hidden>
+        <img
+            src="./images/hyangnam-event-3.png"
+            alt="방문 예약 이벤트 세 번째 안내"
+        >
+        </div>
+    </div>
+    </dialog>    
+
 </body>
 </html>
